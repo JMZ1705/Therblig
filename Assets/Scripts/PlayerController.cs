@@ -40,6 +40,7 @@
 using UnityEngine;              // Todo lo básico de Unity: MonoBehaviour, Vector2, Rigidbody2D...
 using UnityEngine.InputSystem;  // El New Input System: nos da InputAction.CallbackContext.
 using TMPro;                    // TextMeshPro: el texto de la UI (TextMeshProUGUI).
+using Unity.Cinemachine;
 
 
 // ----------------------------------------------------------------------------
@@ -68,7 +69,7 @@ public class PlayerController : MonoBehaviour
     // --- Movimiento horizontal ---
     public float direction;     // Hacia dónde empuja el jugador: -1 izquierda, 0 quieto, 1 derecha.
                                 // La llena el método Move() cuando el jugador presiona una tecla.
-    
+
     public float speed;         // Qué tan rápido se mueve. Se ajusta en el Inspector.
     public Rigidbody2D rb;      // Referencia al Rigidbody2D. Es el componente que mueve
                                 // al jugador usando física (velocidad, fuerzas, gravedad).
@@ -103,6 +104,8 @@ public class PlayerController : MonoBehaviour
 
     // --- Interfaz de usuario (UI) ---
     public TextMeshProUGUI healthText;  // El texto en pantalla donde mostramos la vida.
+
+    public CinemachineImpulseSource ImpulseSource;
 
 
     // ========================================================================
@@ -181,7 +184,7 @@ public class PlayerController : MonoBehaviour
             // Restarlo cada frame hace que hitTime baje en SEGUNDOS REALES,
             // sin importar si el juego corre a 30, 60 o 144 FPS.
             hitTime -= Time.deltaTime;
-            playerAnimator.SetFloat("isHit",hitTime);
+            playerAnimator.SetFloat("isHit", hitTime);
         }
 
         // ---- 3. ¿DEBO VOLTEAR EL SPRITE? ----
@@ -287,9 +290,9 @@ public class PlayerController : MonoBehaviour
         // Actualizamos el texto de la UI para que el jugador vea su vida nueva.
         healthText.text = $"Health: {health}/{maxHealth}";
 
-        if(health <=0)
+        if (health <= 0)
         {
-            playerAnimator.SetBool("isDead",true);
+            playerAnimator.SetBool("isDead", true);
         }
     }
 
@@ -316,5 +319,41 @@ public class PlayerController : MonoBehaviour
 
         // Y de nuevo actualizamos la UI.
         healthText.text = $"Health: {health}/{maxHealth}";
-   }
+    }
+
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Vida1"))
+        {
+            collision.gameObject.SetActive(false);
+            AddHealth(+25f);
+            
+
+        }
+        if (collision.gameObject.CompareTag("Vida2"))
+        {
+            collision.gameObject.SetActive(false);
+            
+            maxHealth = (maxHealth+50f);
+
+            AddHealth(maxHealth);
+            
+
+        }
+        if (collision.gameObject.CompareTag("Hurt1"))
+        {
+            collision.gameObject.SetActive(false);
+            TakeDamage(25f);
+            ImpulseSource.GenerateImpulse(20f);
+
+        }
+        if (collision.gameObject.CompareTag("Hurt2"))
+        {
+            collision.gameObject.SetActive(false);
+            TakeDamage(75f);
+            ImpulseSource.GenerateImpulse(50f);
+        }
+
+    }
 }

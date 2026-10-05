@@ -85,6 +85,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float enemyDamage;     // Daño que hace al jugador.
     [SerializeField] private float enemyStrength;   // Fuerza del empujón al jugador.
 
+    public CinemachineImpulseSource ImpulseSource;
+
 
     // ========================================================================
     // START()
@@ -269,6 +271,10 @@ public class EnemyController : MonoBehaviour
             // un botón: se activa, dispara la animación una vez y se apaga solo.
             // Ideal para acciones puntuales como atacar, saltar o morir.
             //enemyAnimator.SetTrigger("IsAttacking");
+
+            ImpulseSource.GenerateImpulse(enemyStrength);
+
+
 
 
         }
