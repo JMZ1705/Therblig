@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 1504060224}
   - component: {fileID: 1504060223}
   - component: {fileID: 1504060226}
-  - component: {fileID: 1504060225}
+  - component: {fileID: 1504060227}
   m_Layer: 0
   m_Name: VaporParticles
   m_TagString: Untagged
@@ -5205,25 +5205,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &1504060225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504060220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a9309f917cf6e44ab9bf5778967fe83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoilerVapor
-  activeDuration: 2
-  inactiveDuration: 3
-  initialDelay: 0
-  damageAmount: 15
-  damageInterval: 0.5
-  vaporParticles: {fileID: 0}
-  vaporDamageCollider: {fileID: 1504060226}
 --- !u!61 &1504060226
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5270,6 +5251,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.121471, y: 2.8477507}
   m_EdgeRadius: 0
+--- !u!114 &1504060227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504060220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c5b10a5796308d4a81ee2c1da6908ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoilerVapor
+  activeDuration: 2
+  inactiveDuration: 3
+  initialDelay: 0
+  damageAmount: 15
+  damageInterval: 0.5
+  vaporParticles: {fileID: 1504060224}
+  vaporDamageCollider: {fileID: 1504060226}
 --- !u!1 &1527003147
 GameObject:
   m_ObjectHideFlags: 0
@@ -6096,7 +6096,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1977681107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a9309f917cf6e44ab9bf5778967fe83, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c5b10a5796308d4a81ee2c1da6908ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoilerVapor
   activeDuration: 2
@@ -6105,7 +6105,7 @@ MonoBehaviour:
   damageAmount: 15
   damageInterval: 0.5
   vaporParticles: {fileID: 1504060224}
-  vaporDamageCollider: {fileID: 1977681110}
+  vaporDamageCollider: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
