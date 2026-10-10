@@ -9,12 +9,12 @@ public class BoilerVapor : MonoBehaviour
     [SerializeField] private float initialDelay = 0.0f;    // Desfase inicial
 
     [Header("Daño")]
-    [SerializeField] private float damageAmount = 15.0f;   // Daño por cada golpe
+    [SerializeField] private float damageAmount = 5.0f;    // Cantidad de daño por cada golpe
     [SerializeField] private float damageInterval = 0.5f;   // Frecuencia del daño
 
     [Header("Referencias")]
     [SerializeField] private ParticleSystem vaporParticles;
-    [SerializeField] private Collider2D vaporDamageCollider; // Este DEBE ser el Collider TRIGGER del vapor
+    [SerializeField] private Collider2D vaporDamageCollider; // Debe ser Trigger
 
     private bool isVaporActive = false;
     private Coroutine damageCoroutine;
@@ -75,25 +75,22 @@ public class BoilerVapor : MonoBehaviour
     {
         if (!isVaporActive) return;
 
-        if (other.CompareTag("Player"))
+        PlayerController player = other.GetComponentInParent<PlayerController>();
+
+        if (player != null && damageCoroutine == null)
         {
-            PlayerController player = other.GetComponent<PlayerController>();
-            if (player != null && damageCoroutine == null)
-            {
-                damageCoroutine = StartCoroutine(ApplyDamageOverTime(player));
-            }
+            damageCoroutine = StartCoroutine(ApplyDamageOverTime(player));
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        PlayerController player = other.GetComponentInParent<PlayerController>();
+
+        if (player != null && damageCoroutine != null)
         {
-            if (damageCoroutine != null)
-            {
-                StopCoroutine(damageCoroutine);
-                damageCoroutine = null;
-            }
+            StopCoroutine(damageCoroutine);
+            damageCoroutine = null;
         }
     }
 
@@ -101,8 +98,11 @@ public class BoilerVapor : MonoBehaviour
     {
         while (isVaporActive && player != null)
         {
-            // Resta la vida y actualiza la UI a través del PlayerController
+            // Llama al método oficial del jugador para aplicar daño y actualizar la UI correctamente
             player.TakeDamage(damageAmount);
+
+            // Desactiva el aturdimiento/bloqueo de movimiento para que el jugador pueda seguir moviéndose
+            player.hitTime = 0;
 
             Debug.Log($"<color=red>¡Daño de Caldera!</color> Vida restante: {player.health}");
 
