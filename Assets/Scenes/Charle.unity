@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 1788516241}
   - component: {fileID: 1788516240}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Marco 9 Sliced
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2.5
+  m_PixelsPerUnitMultiplier: 5
 --- !u!222 &1788516241
 CanvasRenderer:
   m_ObjectHideFlags: 0
