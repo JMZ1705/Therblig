@@ -41,6 +41,10 @@ using UnityEngine;              // Todo lo básico de Unity: MonoBehaviour, Vect
 using UnityEngine.InputSystem;  // El New Input System: nos da InputAction.CallbackContext.
 using TMPro;                    // TextMeshPro: el texto de la UI (TextMeshProUGUI).
 using Unity.Cinemachine;
+using Unity.VisualScripting;
+using JetBrains.Annotations;
+using System.Collections.Generic;
+using System.Collections;
 
 
 // ----------------------------------------------------------------------------
@@ -65,7 +69,8 @@ public class PlayerController : MonoBehaviour
     //   [SerializeField] -> truco para que una variable private SÍ aparezca en
     //                       el Inspector, sin dejar que otros scripts la toquen.
     // ========================================================================
-
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject spawn;
     // --- Movimiento horizontal ---
     public float direction;     // Hacia dónde empuja el jugador: -1 izquierda, 0 quieto, 1 derecha.
                                 // La llena el método Move() cuando el jugador presiona una tecla.
@@ -107,6 +112,8 @@ public class PlayerController : MonoBehaviour
 
     public CinemachineImpulseSource ImpulseSource;
 
+    public bool checkPoint = false;
+
 
     // ========================================================================
     // START()
@@ -135,6 +142,7 @@ public class PlayerController : MonoBehaviour
     // Si el juego corre a 60 FPS, este método se ejecuta 60 veces por segundo.
     // Aquí va todo lo que debe revisarse constantemente.
     // ========================================================================
+
     void Update()
     {
         // ---- 1. ¿ESTOY EN EL PISO? ----
@@ -186,6 +194,8 @@ public class PlayerController : MonoBehaviour
             hitTime -= Time.deltaTime;
             playerAnimator.SetFloat("isHit", hitTime);
         }
+
+        
 
         // ---- 3. ¿DEBO VOLTEAR EL SPRITE? ----
         // Comparamos hacia dónde MIRA con hacia dónde SE MUEVE.
@@ -292,8 +302,10 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
-            playerAnimator.SetBool("isDead", true);
+            //playerAnimator.SetBool("isDead", true);
+            KillPlayer();
         }
+
     }
 
 
@@ -321,10 +333,25 @@ public class PlayerController : MonoBehaviour
         healthText.text = $"Health: {health}/{maxHealth}";
     }
 
+    public void KillPlayer()
+    {
+        player.SetActive(false);
 
+        StartCoroutine(RespawnPlayer());
+
+    }
+    
+    IEnumerator RespawnPlayer()
+    {
+        player.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+
+        player.transform.position = spawn.transform.position;
+        //player.SetActive(true);
+    }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Vida1"))
+        /*if (collision.gameObject.CompareTag("Vida1"))
         {
             collision.gameObject.SetActive(false);
             AddHealth(+25f);
@@ -353,7 +380,21 @@ public class PlayerController : MonoBehaviour
             collision.gameObject.SetActive(false);
             TakeDamage(75f);
             ImpulseSource.GenerateImpulse(50f);
+        }*/
+
+        if (collision.gameObject.CompareTag("checkPoint"))
+        {
+            checkPoint = true;
         }
 
+      
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("confiner"))
+        {
+            KillPlayer();
+        }
     }
 }

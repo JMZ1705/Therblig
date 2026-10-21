@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Hurt2
-  - Limit
+  - confiner
   layers:
   - Default
   - TransparentFX
