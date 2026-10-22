@@ -185158,6 +185158,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1845731765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1217834602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1217834604}
+  - component: {fileID: 1217834605}
+  m_Layer: 0
+  m_Name: Ensayito
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1217834604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217834602}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.04947, y: -2.60913, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1217834605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217834602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb4a7ba4e1b71542a8026d7a02fbe4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuController
+  player: {fileID: 1845731758}
+  spawn: {fileID: 1921725115}
+  direction: 0
+  speed: 0
+  rb: {fileID: 0}
+  jumpForce: 0
+  canJump: 0
+  groundCheck: {fileID: 0}
+  groundCheckRadius: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  playerAnimator: {fileID: 0}
+  isFacingRight: 0
+  health: 0
+  maxHealth: 0
+  hitForce: 0
+  hitTime: 0
+  hitFromRight: 0
+  healthText: {fileID: 0}
+  ImpulseSource: {fileID: 0}
+  checkPoint: 0
 --- !u!1 &1513592124
 GameObject:
   m_ObjectHideFlags: 0
@@ -185999,3 +186065,4 @@ SceneRoots:
   - {fileID: 1892011790}
   - {fileID: 1769429537}
   - {fileID: 1921725116}
+  - {fileID: 1217834604}

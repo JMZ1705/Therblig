@@ -47,6 +47,7 @@ using System.Collections.Generic;
 using System.Collections;
 
 
+
 // ----------------------------------------------------------------------------
 // LA CLASE
 // "public class PlayerController : MonoBehaviour" significa:
@@ -69,8 +70,8 @@ public class PlayerController : MonoBehaviour
     //   [SerializeField] -> truco para que una variable private SÍ aparezca en
     //                       el Inspector, sin dejar que otros scripts la toquen.
     // ========================================================================
-    [SerializeField] GameObject player;
-    [SerializeField] GameObject spawn;
+    public GameObject player;
+    public GameObject spawn;  
     // --- Movimiento horizontal ---
     public float direction;     // Hacia dónde empuja el jugador: -1 izquierda, 0 quieto, 1 derecha.
                                 // La llena el método Move() cuando el jugador presiona una tecla.
@@ -114,6 +115,8 @@ public class PlayerController : MonoBehaviour
 
     public bool checkPoint = false;
 
+    private MenuController menuControl;
+
 
     // ========================================================================
     // START()
@@ -127,6 +130,7 @@ public class PlayerController : MonoBehaviour
         // Aquí guardamos el Animator del jugador para poder usarlo después.
         // (Hacerlo así evita tener que arrastrarlo a mano en el Inspector.)
         playerAnimator = GetComponent<Animator>();
+        this.menuControl = new MenuController(player, spawn);
 
         // Escribimos la vida en el texto de la UI.
         // El signo $ antes de las comillas crea un "string interpolado":
@@ -333,22 +337,12 @@ public class PlayerController : MonoBehaviour
         healthText.text = $"Health: {health}/{maxHealth}";
     }
 
-    public void KillPlayer()
+    private void KillPlayer()
     {
+        StartCoroutine(menuControl.RespawnPlayer());
         player.SetActive(false);
-
-        StartCoroutine(RespawnPlayer());
-
     }
-    
-    IEnumerator RespawnPlayer()
-    {
-        player.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
 
-        player.transform.position = spawn.transform.position;
-        //player.SetActive(true);
-    }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         /*if (collision.gameObject.CompareTag("Vida1"))
@@ -389,12 +383,12 @@ public class PlayerController : MonoBehaviour
 
       
     }
-
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("confiner"))
+        if (collision.gameObject.CompareTag("confiner"))    
         {
             KillPlayer();
         }
     }
+
 }
