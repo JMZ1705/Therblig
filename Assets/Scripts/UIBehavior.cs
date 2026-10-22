@@ -45,4 +45,28 @@ public class UIBehavior : MonoBehaviour
     {
         SceneManager.LoadScene("Level Select");
     }
+    public void LevelOne()
+    {
+        SceneManager.LoadScene("N1 Inicio");
+    }
+    public void LevelTwo()
+    {
+        SceneManager.LoadScene("N2 Engranajes");
+    }
+    public void LevelThree()
+    {
+        SceneManager.LoadScene("N3 Calderas");
+    }
+    public void LevelFour()
+    {
+        SceneManager.LoadScene("N4 Bandas T");
+    }
+    public void LevelFive()
+    {
+        SceneManager.LoadScene("N5 FinalBoss");
+    }
+    public void LevelSix()
+    {
+        SceneManager.LoadScene("N6 Final");
+    }
 }
