@@ -115,7 +115,6 @@ public class PlayerController : MonoBehaviour
 
     public bool checkPoint = false;
 
-    private MenuController menuControl;
 
 
     // ========================================================================
@@ -130,7 +129,6 @@ public class PlayerController : MonoBehaviour
         // Aquí guardamos el Animator del jugador para poder usarlo después.
         // (Hacerlo así evita tener que arrastrarlo a mano en el Inspector.)
         playerAnimator = GetComponent<Animator>();
-        this.menuControl = new MenuController(player, spawn);
 
         // Escribimos la vida en el texto de la UI.
         // El signo $ antes de las comillas crea un "string interpolado":
@@ -339,8 +337,20 @@ public class PlayerController : MonoBehaviour
 
     private void KillPlayer()
     {
-        StartCoroutine(menuControl.RespawnPlayer());
-        player.SetActive(false);
+        SpriteRenderer playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
+        playerSpriteRenderer.enabled = false;
+        rb.bodyType = RigidbodyType2D.Static;
+        StartCoroutine(RespawnPlayer());
+    }
+    IEnumerator RespawnPlayer()
+    {
+        yield return new WaitForSeconds(0.25f);
+        
+        player.transform.position = spawn.transform.position;
+
+        SpriteRenderer playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
+        playerSpriteRenderer.enabled = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
