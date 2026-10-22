@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
     // Aquí va todo lo que debe revisarse constantemente.
     // ========================================================================
 
-    void Update()
+    void FixedUpdate()
     {
         // ---- 1. ¿ESTOY EN EL PISO? ----
         // Physics2D.OverlapCircle() dibuja un círculo invisible y devuelve
