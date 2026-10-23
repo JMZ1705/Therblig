@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
     // ========================================================================
     public GameObject player;
     public GameObject spawn;
-    private GameManager gm;
+    public GameManager gm;
     // --- Movimiento horizontal ---
     public float direction;     // Hacia dónde empuja el jugador: -1 izquierda, 0 quieto, 1 derecha.
                                 // La llena el método Move() cuando el jugador presiona una tecla.
@@ -92,6 +92,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRadius;    // Radio (tamaño) de ese círculo invisible.
     [SerializeField] private LayerMask groundLayer;      // Filtro: qué Layers cuentan como "suelo".
                                                          // Así el círculo no detecta enemigos o monedas.
+
+    //--- Dash ---
+    private bool canDash = true;
+    private bool isDashing = false;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+
+
+    [SerializeField] private TrailRenderer tr;
+
 
     // --- Animación y orientación ---
     public Animator playerAnimator; // Componente que reproduce las animaciones.
@@ -134,7 +145,6 @@ public class PlayerController : MonoBehaviour
         // (Hacerlo así evita tener que arrastrarlo a mano en el Inspector.)
         playerAnimator = GetComponent<Animator>();
 
-        // Para conseguir cambiar de escena
         gm = new GameManager();
 
         // Escribimos la vida en el texto de la UI.
@@ -156,6 +166,10 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isDashing)
+        {
+            return;
+        }
         // ---- 1. ¿ESTOY EN EL PISO? ----
         // Physics2D.OverlapCircle() dibuja un círculo invisible y devuelve
         // true si ese círculo está tocando algún collider de la Layer indicada.
@@ -183,6 +197,8 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("isGround", canJump);
             yVelocity = rb.linearVelocityY;
             playerAnimator.SetFloat("yVelocity", yVelocity);
+
+
         }
         else // Me golpearon: el jugador pierde el control por unos instantes.
         {
@@ -206,7 +222,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetFloat("isHit", hitTime);
         }
 
-        
+
 
         // ---- 3. ¿DEBO VOLTEAR EL SPRITE? ----
         // Comparamos hacia dónde MIRA con hacia dónde SE MUEVE.
@@ -225,7 +241,39 @@ public class PlayerController : MonoBehaviour
         // Nota: si direction == 0 (está quieto) no entra a ninguno de los dos,
         // así que el jugador se queda mirando hacia donde iba. Correcto.
     }
+    public void DashInput(InputAction.CallbackContext context)
+    {
+        // Solo se activa al presionar la tecla (performed) y si el jugador puede dashear (canDash) y no está aturdido (hitTime <= 0)
+        if (context.performed && canDash && hitTime <= 0)
+        {
+            StartCoroutine(Dash());
+        }
+    }
 
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+
+        // AQUÍ ESTÁ LA SOLUCIÓN:
+        // Si isFacingRight es true, multiplicamos por 1 (derecha). Si es false, por -1 (izquierda).
+        float dashDirection = isFacingRight ? -1f : 1f;
+
+        rb.linearVelocity = new Vector3(dashDirection * dashingPower, 0f, 0f);
+
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+    }
 
     // ========================================================================
     // MOVE()  -- Método público llamado por el New Input System
@@ -269,9 +317,6 @@ public class PlayerController : MonoBehaviour
             //                             (Force, en cambio, la aplica gradualmente.)
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-    }
-    public void Dash(InputAction.CallbackContext context){
-        
     }
 
 
@@ -354,6 +399,22 @@ public class PlayerController : MonoBehaviour
 
     private void KillPlayer()
     {
+        /*    if (vidas >= 0)
+            {
+
+                vidasText.text = $"Vidas: {vidas}";
+            }
+            else
+            {
+
+                gm.LevelFour();
+                //vidas = iVidas;
+            }*/
+        /* if(vidas == 0 && health <= 0)
+         {
+             gm.LevelFour();
+             vidas = iVidas;
+         }*/
         SpriteRenderer playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
         playerSpriteRenderer.enabled = false;
         rb.bodyType = RigidbodyType2D.Static;
@@ -363,7 +424,7 @@ public class PlayerController : MonoBehaviour
             vidas--;
             vidasText.text = $"Vidas: {vidas}";
             health = maxHealth;
-            
+
         }
 
         if (vidas <= 0)
@@ -374,13 +435,13 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(RespawnPlayer());
         }
-        
-        
+
+
     }
     IEnumerator RespawnPlayer()
     {
         yield return new WaitForSeconds(0.25f);
-        
+
         player.transform.position = spawn.transform.position;
 
         SpriteRenderer playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
@@ -433,11 +494,12 @@ public class PlayerController : MonoBehaviour
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("confiner"))    
+        if (collision.gameObject.CompareTag("confiner"))
         {
             KillPlayer();
-            
+
         }
     }
 
 }
+
