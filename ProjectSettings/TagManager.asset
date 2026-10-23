@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - confiner
+  - Button
+  - Ending
   layers:
   - Default
   - TransparentFX

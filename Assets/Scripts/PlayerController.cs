@@ -71,7 +71,8 @@ public class PlayerController : MonoBehaviour
     //                       el Inspector, sin dejar que otros scripts la toquen.
     // ========================================================================
     public GameObject player;
-    public GameObject spawn;  
+    public GameObject spawn;
+    public UIBehavior gm;
     // --- Movimiento horizontal ---
     public float direction;     // Hacia dónde empuja el jugador: -1 izquierda, 0 quieto, 1 derecha.
                                 // La llena el método Move() cuando el jugador presiona una tecla.
@@ -101,6 +102,8 @@ public class PlayerController : MonoBehaviour
     public float health;                        // Vida actual del jugador.
     [SerializeField] private float maxHealth;   // Vida máxima. Es private porque no debería
                                                 // cambiar durante el juego, solo se configura.
+    public int vidas;
+    public int iVidas;
 
     // --- Golpe / knockback (el empujón al recibir daño) ---
     public float hitForce;      // Con cuánta fuerza sale volando el jugador al ser golpeado.
@@ -110,6 +113,7 @@ public class PlayerController : MonoBehaviour
 
     // --- Interfaz de usuario (UI) ---
     public TextMeshProUGUI healthText;  // El texto en pantalla donde mostramos la vida.
+    public TextMeshProUGUI vidasText;
 
     public CinemachineImpulseSource ImpulseSource;
 
@@ -134,7 +138,9 @@ public class PlayerController : MonoBehaviour
         // El signo $ antes de las comillas crea un "string interpolado":
         // todo lo que va entre { } se reemplaza por el valor de la variable.
         // Resultado en pantalla, por ejemplo: "Health: 100/100"
+        vidas = iVidas;
         healthText.text = $"Health: {health}/{maxHealth}";
+        vidasText.text = $"Vidas: {vidas}";
     }
 
 
@@ -302,11 +308,16 @@ public class PlayerController : MonoBehaviour
         // Actualizamos el texto de la UI para que el jugador vea su vida nueva.
         healthText.text = $"Health: {health}/{maxHealth}";
 
-        if (health <= 0)
+        /*if (health <= 0)
         {
             //playerAnimator.SetBool("isDead", true);
-            KillPlayer();
+           //vidas--;
+           KillPlayer();
         }
+        /*if(vidas <= 0)
+        {
+            
+        }*/
 
     }
 
@@ -337,10 +348,44 @@ public class PlayerController : MonoBehaviour
 
     private void KillPlayer()
     {
+    /*    if (vidas >= 0)
+        {
+             
+            vidasText.text = $"Vidas: {vidas}";
+        }
+        else
+        {
+
+            gm.LevelFour();
+            //vidas = iVidas;
+        }*/
+       /* if(vidas == 0 && health <= 0)
+        {
+            gm.LevelFour();
+            vidas = iVidas;
+        }*/
         SpriteRenderer playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
         playerSpriteRenderer.enabled = false;
         rb.bodyType = RigidbodyType2D.Static;
-        StartCoroutine(RespawnPlayer());
+        TakeDamage(20);
+        if (health <= 0)
+        {
+            vidas--;
+            vidasText.text = $"Vidas: {vidas}";
+            health = maxHealth;
+            
+        }
+
+        if (vidas <= 0)
+        {
+            gm.LevelFour();
+        }
+        else
+        {
+            StartCoroutine(RespawnPlayer());
+        }
+        
+        
     }
     IEnumerator RespawnPlayer()
     {
@@ -390,14 +435,18 @@ public class PlayerController : MonoBehaviour
         {
             checkPoint = true;
         }
+        if (collision.gameObject.CompareTag("Ending"))
+        {
+            gm.LevelSelect();
+        }
 
-      
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("confiner"))    
         {
             KillPlayer();
+            
         }
     }
 
