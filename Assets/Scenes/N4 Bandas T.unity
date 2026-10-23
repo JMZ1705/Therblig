@@ -185167,7 +185167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 406816168}
-  - component: {fileID: 406816167}
+  - component: {fileID: 406816169}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -185175,20 +185175,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &406816167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406816166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d14ca876b93c13642a339383b08448f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIBehavior
-  buttons: []
-  selectedButton: {fileID: 0}
 --- !u!4 &406816168
 Transform:
   m_ObjectHideFlags: 0
@@ -185204,6 +185190,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &406816169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406816166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f564ee9bfeb87b74ea2f8dcd35b3744e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1 &694138766
 GameObject:
   m_ObjectHideFlags: 0
@@ -185847,7 +185845,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   player: {fileID: 1845731758}
   spawn: {fileID: 1921725115}
-  gm: {fileID: 406816167}
   direction: 0
   speed: 6
   rb: {fileID: 1845731763}
@@ -186584,6 +186581,6 @@ SceneRoots:
   - {fileID: 1769429537}
   - {fileID: 1921725116}
   - {fileID: 1217834604}
-  - {fileID: 406816168}
   - {fileID: 1191782130}
   - {fileID: 1856579559}
+  - {fileID: 406816168}

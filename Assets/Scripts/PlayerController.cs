@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
     // ========================================================================
     public GameObject player;
     public GameObject spawn;
-    public UIBehavior gm;
+    private GameManager gm;
     // --- Movimiento horizontal ---
     public float direction;     // Hacia dónde empuja el jugador: -1 izquierda, 0 quieto, 1 derecha.
                                 // La llena el método Move() cuando el jugador presiona una tecla.
@@ -133,6 +133,9 @@ public class PlayerController : MonoBehaviour
         // Aquí guardamos el Animator del jugador para poder usarlo después.
         // (Hacerlo así evita tener que arrastrarlo a mano en el Inspector.)
         playerAnimator = GetComponent<Animator>();
+
+        // Para conseguir cambiar de escena
+        gm = new GameManager();
 
         // Escribimos la vida en el texto de la UI.
         // El signo $ antes de las comillas crea un "string interpolado":
@@ -267,6 +270,9 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
+    public void Dash(InputAction.CallbackContext context){
+        
+    }
 
 
     // ========================================================================
@@ -348,22 +354,6 @@ public class PlayerController : MonoBehaviour
 
     private void KillPlayer()
     {
-    /*    if (vidas >= 0)
-        {
-             
-            vidasText.text = $"Vidas: {vidas}";
-        }
-        else
-        {
-
-            gm.LevelFour();
-            //vidas = iVidas;
-        }*/
-       /* if(vidas == 0 && health <= 0)
-        {
-            gm.LevelFour();
-            vidas = iVidas;
-        }*/
         SpriteRenderer playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
         playerSpriteRenderer.enabled = false;
         rb.bodyType = RigidbodyType2D.Static;
