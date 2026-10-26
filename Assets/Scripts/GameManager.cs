@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
+    public void LoadTitleScreen(){
+        SceneManager.LoadScene("Menu Principal", LoadSceneMode.Single);
+    }
     public void LevelSelect()
     {
         SceneManager.LoadScene("Level Select", LoadSceneMode.Single);
