@@ -103,6 +103,23 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private TrailRenderer tr;
 
+    //--- WallSlide---
+    private bool isWallSliding;
+    private float wallSlidingSpeed = 0.1f;
+
+    //---WallJump---
+    private bool isWallJumping;
+    private float wallJumpingDirection;
+    private float wallJumpingTime = 0.2f;
+    private float wallJumpingCounter;
+    private float wallJumpingDuration = 0.4f;
+    private Vector2 wallJumpingPower= new Vector2(0f,8f);
+
+    private int wallJumpCant = 0;
+
+    //--- Deteccion de la pared---
+    [SerializeField] private Transform wallCheck;
+    [SerializeField] private LayerMask wallLayer;
 
     // --- Animación y orientación ---
     public Animator playerAnimator; // Componente que reproduce las animaciones.
@@ -166,10 +183,17 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isDashing)
+        if (isDashing == true)
         {
             return;
         }
+
+        if (isWallJumping == true)
+        {
+            return;
+        }
+
+
         // ---- 1. ¿ESTOY EN EL PISO? ----
         // Physics2D.OverlapCircle() dibuja un círculo invisible y devuelve
         // true si ese círculo está tocando algún collider de la Layer indicada.
@@ -177,28 +201,48 @@ public class PlayerController : MonoBehaviour
         // Lo guardamos en canJump: si toca el piso -> true, si está en el aire -> false.
         canJump = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // ---- 2. ¿ME MUEVO YO, O ME ESTÁN EMPUJANDO? ----
-        // Usamos hitTime como un "cronómetro". Si está en 0 o menos, significa
-        // que no me han golpeado (o el golpe ya pasó) y tengo el control.
-        if (hitTime <= 0)
+        if (canJump == true)
         {
-            // MOVIMIENTO NORMAL
-            // linearVelocity es la velocidad del Rigidbody2D: un Vector2 (X, Y).
-            // Le asignamos un Vector2 nuevo donde:
-            //   X = direction * speed  -> la dirección que presiona el jugador por su velocidad.
-            //   Y = rb.linearVelocityY -> ¡OJO! Conservamos la velocidad vertical que ya tenía.
-            // Si en Y pusiéramos 0, borraríamos el salto y la gravedad cada frame.
-            rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocityY);
+            wallJumpCant = 0;
+        }
 
-            // Le pasamos el valor de "direction" al Animator.
-            // En el Animator creamos un parámetro float llamado "Direction" y con él
-            // decidimos si se reproduce la animación de quieto o de caminar.
-            playerAnimator.SetFloat("Direction", direction);
-            playerAnimator.SetBool("isGround", canJump);
-            yVelocity = rb.linearVelocityY;
-            playerAnimator.SetFloat("yVelocity", yVelocity);
+        //Logica del wallslide
+        if (IsWalled() == true && canJump == false && direction != 0f)//Si detecta el muro, no detecta el piso  y su direción es diferente de 0
+        {
+            isWallSliding = true;
+            // Mientras estés pegado a la pared, el contador se mantiene lleno al máximo
+            wallJumpingCounter = wallJumpingTime;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+        else
+        {
+            isWallSliding = false;
+            wallJumpingCounter -= Time.deltaTime;
 
+            // ---- 2. ¿ME MUEVO YO, O ME ESTÁN EMPUJANDO? ----
+            // Usamos hitTime como un "cronómetro". Si está en 0 o menos, significa
+            // que no me han golpeado (o el golpe ya pasó) y tengo el control.
+           
+        } 
 
+        if (hitTime <= 0)
+        {   
+                if (isWallSliding==true)
+                {
+                   rb.linearVelocity = new Vector2(0f, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
+                   playerAnimator.SetFloat("Direction", 0f);
+                   playerAnimator.SetBool("isGround", canJump);
+                }
+                else
+                {
+                // MOVIMIENTO NORMAL (Solo actúa si NO estamos en la pared)
+                rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+
+                playerAnimator.SetFloat("Direction", direction);
+                playerAnimator.SetBool("isGround", canJump);
+                //yVelocity = rb.linearVelocity.y;
+                //playerAnimator.SetFloat("yVelocity", yVelocity);
+                }
         }
         else // Me golpearon: el jugador pierde el control por unos instantes.
         {
@@ -221,6 +265,8 @@ public class PlayerController : MonoBehaviour
             hitTime -= Time.deltaTime;
             playerAnimator.SetFloat("isHit", hitTime);
         }
+
+       
 
 
 
@@ -258,9 +304,9 @@ public class PlayerController : MonoBehaviour
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
 
-        // AQUÍ ESTÁ LA SOLUCIÓN:
+        
         // Si isFacingRight es true, multiplicamos por 1 (derecha). Si es false, por -1 (izquierda).
-        float dashDirection = isFacingRight ? -1f : 1f;
+        float dashDirection = isFacingRight ? -1f : 1f;//En este caso invertidos porque el sprite está invertido
 
         rb.linearVelocity = new Vector3(dashDirection * dashingPower, 0f, 0f);
 
@@ -273,6 +319,19 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    private bool IsWalled()
+    {
+        return Physics2D.OverlapCircle(wallCheck.position,0.2f,wallLayer);//misma logica que con el canJump
+    }
+
+    
+
+    private void StopWallJumping()
+    {
+        isWallJumping=false;
+
     }
 
     // ========================================================================
@@ -302,13 +361,39 @@ public class PlayerController : MonoBehaviour
     // ========================================================================
     public void Jump(InputAction.CallbackContext context)
     {
+        if (isWallSliding == true)
+        {
+            isWallJumping = false;
+            wallJumpingDirection = isFacingRight ? -1f : 1f;//para saltar en el sentido contrario del cual se esta mirando
+            wallJumpingCounter = wallJumpingTime;
+            CancelInvoke(nameof(StopWallJumping));
+        }
+        else
+        {
+            wallJumpingCounter -= Time.deltaTime;//Para permitir el walljump por un breve intante lugo de separarse de la pared.
+        }
+        if (context.performed && wallJumpingCounter > 0f && wallJumpCant<3)
+        {
+            isWallJumping = true;
+            rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);//aplica el salto con la fuerza dada en el vector wallJumpingPower
+            wallJumpingCounter = 0f;
+            isWallSliding = false;
+            if ((wallJumpingDirection > 0f && !isFacingRight) || (wallJumpingDirection < 0f && isFacingRight))
+            {
+                Flip();
+            }
+            wallJumpCant++;
+            Invoke(nameof(StopWallJumping), wallJumpingDuration);//invoca el metodo para detener el walljump
+        }
+
+      
         // Doble condición unida por && ("Y"): AMBAS deben ser verdaderas.
         //   canJump           -> solo salta si está pisando el piso.
         //   context.performed -> solo en el instante en que se PRESIONA la tecla.
         // ¿Por qué context.performed? Porque el Input System llama a este método
         // varias veces (al presionar, al mantener, al soltar). Sin este filtro,
         // el jugador saltaría 2 o 3 veces con un solo toque.
-        if (canJump && context.performed)
+        else if (canJump && context.performed)
         {
             // AddForce() aplica una fuerza al Rigidbody2D.
             //   Vector2.up * jumpForce -> un empujón hacia arriba (0, jumpForce).
