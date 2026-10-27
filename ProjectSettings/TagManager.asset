@@ -7,6 +7,8 @@ TagManager:
   - confiner
   - Button
   - Ending
+  - checkPoint
+  - Enemy
   layers:
   - Default
   - TransparentFX
