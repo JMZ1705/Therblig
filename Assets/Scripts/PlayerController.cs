@@ -71,7 +71,8 @@ public class PlayerController : MonoBehaviour
     //                       el Inspector, sin dejar que otros scripts la toquen.
     // ========================================================================
     public GameObject player;
-    public GameObject spawn;  
+    public GameObject spawn;
+    public GameManager gm;
     // --- Movimiento horizontal ---
     public float direction;     // Hacia dónde empuja el jugador: -1 izquierda, 0 quieto, 1 derecha.
                                 // La llena el método Move() cuando el jugador presiona una tecla.
@@ -92,6 +93,34 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;      // Filtro: qué Layers cuentan como "suelo".
                                                          // Así el círculo no detecta enemigos o monedas.
 
+    //--- Dash ---
+    private bool canDash = true;
+    private bool isDashing = false;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+
+
+    [SerializeField] private TrailRenderer tr;
+
+    //--- WallSlide---
+    private bool isWallSliding;
+    private float wallSlidingSpeed = 0.1f;
+
+    //---WallJump---
+    private bool isWallJumping;
+    private float wallJumpingDirection;
+    private float wallJumpingTime = 0.2f;
+    private float wallJumpingCounter;
+    private float wallJumpingDuration = 0.4f;
+    private Vector2 wallJumpingPower= new Vector2(0f,8f);
+
+    private int wallJumpCant = 0;
+
+    //--- Deteccion de la pared---
+    [SerializeField] private Transform wallCheck;
+    [SerializeField] private LayerMask wallLayer;
+
     // --- Animación y orientación ---
     public Animator playerAnimator; // Componente que reproduce las animaciones.
     public bool isFacingRight;      // ¿El sprite está mirando a la derecha? Sirve para no voltearlo dos veces.
@@ -101,6 +130,8 @@ public class PlayerController : MonoBehaviour
     public float health;                        // Vida actual del jugador.
     [SerializeField] private float maxHealth;   // Vida máxima. Es private porque no debería
                                                 // cambiar durante el juego, solo se configura.
+    public int vidas;
+    public int iVidas;
 
     // --- Golpe / knockback (el empujón al recibir daño) ---
     public float hitForce;      // Con cuánta fuerza sale volando el jugador al ser golpeado.
@@ -110,6 +141,7 @@ public class PlayerController : MonoBehaviour
 
     // --- Interfaz de usuario (UI) ---
     public TextMeshProUGUI healthText;  // El texto en pantalla donde mostramos la vida.
+    public TextMeshProUGUI vidasText;
 
     public CinemachineImpulseSource ImpulseSource;
 
@@ -130,11 +162,15 @@ public class PlayerController : MonoBehaviour
         // (Hacerlo así evita tener que arrastrarlo a mano en el Inspector.)
         playerAnimator = GetComponent<Animator>();
 
+        gm = new GameManager();
+
         // Escribimos la vida en el texto de la UI.
         // El signo $ antes de las comillas crea un "string interpolado":
         // todo lo que va entre { } se reemplaza por el valor de la variable.
         // Resultado en pantalla, por ejemplo: "Health: 100/100"
+        vidas = iVidas;
         healthText.text = $"Health: {health}/{maxHealth}";
+        vidasText.text = $"Vidas: {vidas}";
     }
 
 
@@ -145,8 +181,19 @@ public class PlayerController : MonoBehaviour
     // Aquí va todo lo que debe revisarse constantemente.
     // ========================================================================
 
-    void Update()
+    void FixedUpdate()
     {
+        if (isDashing == true)
+        {
+            return;
+        }
+
+        if (isWallJumping == true)
+        {
+            return;
+        }
+
+
         // ---- 1. ¿ESTOY EN EL PISO? ----
         // Physics2D.OverlapCircle() dibuja un círculo invisible y devuelve
         // true si ese círculo está tocando algún collider de la Layer indicada.
@@ -154,26 +201,48 @@ public class PlayerController : MonoBehaviour
         // Lo guardamos en canJump: si toca el piso -> true, si está en el aire -> false.
         canJump = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // ---- 2. ¿ME MUEVO YO, O ME ESTÁN EMPUJANDO? ----
-        // Usamos hitTime como un "cronómetro". Si está en 0 o menos, significa
-        // que no me han golpeado (o el golpe ya pasó) y tengo el control.
-        if (hitTime <= 0)
+        if (canJump == true)
         {
-            // MOVIMIENTO NORMAL
-            // linearVelocity es la velocidad del Rigidbody2D: un Vector2 (X, Y).
-            // Le asignamos un Vector2 nuevo donde:
-            //   X = direction * speed  -> la dirección que presiona el jugador por su velocidad.
-            //   Y = rb.linearVelocityY -> ¡OJO! Conservamos la velocidad vertical que ya tenía.
-            // Si en Y pusiéramos 0, borraríamos el salto y la gravedad cada frame.
-            rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocityY);
+            wallJumpCant = 0;
+        }
 
-            // Le pasamos el valor de "direction" al Animator.
-            // En el Animator creamos un parámetro float llamado "Direction" y con él
-            // decidimos si se reproduce la animación de quieto o de caminar.
-            playerAnimator.SetFloat("Direction", direction);
-            playerAnimator.SetBool("isGround", canJump);
-            yVelocity = rb.linearVelocityY;
-            playerAnimator.SetFloat("yVelocity", yVelocity);
+        //Logica del wallslide
+        if (IsWalled() == true && canJump == false && direction != 0f)//Si detecta el muro, no detecta el piso  y su direción es diferente de 0
+        {
+            isWallSliding = true;
+            // Mientras estés pegado a la pared, el contador se mantiene lleno al máximo
+            wallJumpingCounter = wallJumpingTime;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+        else
+        {
+            isWallSliding = false;
+            wallJumpingCounter -= Time.deltaTime;
+
+            // ---- 2. ¿ME MUEVO YO, O ME ESTÁN EMPUJANDO? ----
+            // Usamos hitTime como un "cronómetro". Si está en 0 o menos, significa
+            // que no me han golpeado (o el golpe ya pasó) y tengo el control.
+           
+        } 
+
+        if (hitTime <= 0)
+        {   
+                if (isWallSliding==true)
+                {
+                   rb.linearVelocity = new Vector2(0f, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
+                   playerAnimator.SetFloat("Direction", 0f);
+                   playerAnimator.SetBool("isGround", canJump);
+                }
+                else
+                {
+                // MOVIMIENTO NORMAL (Solo actúa si NO estamos en la pared)
+                rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+
+                playerAnimator.SetFloat("Direction", direction);
+                playerAnimator.SetBool("isGround", canJump);
+                //yVelocity = rb.linearVelocity.y;
+                //playerAnimator.SetFloat("yVelocity", yVelocity);
+                }
         }
         else // Me golpearon: el jugador pierde el control por unos instantes.
         {
@@ -197,7 +266,9 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetFloat("isHit", hitTime);
         }
 
-        
+       
+
+
 
         // ---- 3. ¿DEBO VOLTEAR EL SPRITE? ----
         // Comparamos hacia dónde MIRA con hacia dónde SE MUEVE.
@@ -216,7 +287,52 @@ public class PlayerController : MonoBehaviour
         // Nota: si direction == 0 (está quieto) no entra a ninguno de los dos,
         // así que el jugador se queda mirando hacia donde iba. Correcto.
     }
+    public void DashInput(InputAction.CallbackContext context)
+    {
+        // Solo se activa al presionar la tecla (performed) y si el jugador puede dashear (canDash) y no está aturdido (hitTime <= 0)
+        if (context.performed && canDash && hitTime <= 0)
+        {
+            StartCoroutine(Dash());
+        }
+    }
 
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+
+        
+        // Si isFacingRight es true, multiplicamos por 1 (derecha). Si es false, por -1 (izquierda).
+        float dashDirection = isFacingRight ? -1f : 1f;//En este caso invertidos porque el sprite está invertido
+
+        rb.linearVelocity = new Vector3(dashDirection * dashingPower, 0f, 0f);
+
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+    }
+
+    private bool IsWalled()
+    {
+        return Physics2D.OverlapCircle(wallCheck.position,0.2f,wallLayer);//misma logica que con el canJump
+    }
+
+    
+
+    private void StopWallJumping()
+    {
+        isWallJumping=false;
+
+    }
 
     // ========================================================================
     // MOVE()  -- Método público llamado por el New Input System
@@ -245,13 +361,39 @@ public class PlayerController : MonoBehaviour
     // ========================================================================
     public void Jump(InputAction.CallbackContext context)
     {
+        if (isWallSliding == true)
+        {
+            isWallJumping = false;
+            wallJumpingDirection = isFacingRight ? -1f : 1f;//para saltar en el sentido contrario del cual se esta mirando
+            wallJumpingCounter = wallJumpingTime;
+            CancelInvoke(nameof(StopWallJumping));
+        }
+        else
+        {
+            wallJumpingCounter -= Time.deltaTime;//Para permitir el walljump por un breve intante lugo de separarse de la pared.
+        }
+        if (context.performed && wallJumpingCounter > 0f && wallJumpCant<3)
+        {
+            isWallJumping = true;
+            rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);//aplica el salto con la fuerza dada en el vector wallJumpingPower
+            wallJumpingCounter = 0f;
+            isWallSliding = false;
+            if ((wallJumpingDirection > 0f && !isFacingRight) || (wallJumpingDirection < 0f && isFacingRight))
+            {
+                Flip();
+            }
+            wallJumpCant++;
+            Invoke(nameof(StopWallJumping), wallJumpingDuration);//invoca el metodo para detener el walljump
+        }
+
+      
         // Doble condición unida por && ("Y"): AMBAS deben ser verdaderas.
         //   canJump           -> solo salta si está pisando el piso.
         //   context.performed -> solo en el instante en que se PRESIONA la tecla.
         // ¿Por qué context.performed? Porque el Input System llama a este método
         // varias veces (al presionar, al mantener, al soltar). Sin este filtro,
         // el jugador saltaría 2 o 3 veces con un solo toque.
-        if (canJump && context.performed)
+        else if (canJump && context.performed)
         {
             // AddForce() aplica una fuerza al Rigidbody2D.
             //   Vector2.up * jumpForce -> un empujón hacia arriba (0, jumpForce).
@@ -302,11 +444,16 @@ public class PlayerController : MonoBehaviour
         // Actualizamos el texto de la UI para que el jugador vea su vida nueva.
         healthText.text = $"Health: {health}/{maxHealth}";
 
-        if (health <= 0)
+        /*if (health <= 0)
         {
             //playerAnimator.SetBool("isDead", true);
-            KillPlayer();
+           //vidas--;
+           KillPlayer();
         }
+        /*if(vidas <= 0)
+        {
+            
+        }*/
 
     }
 
@@ -337,15 +484,49 @@ public class PlayerController : MonoBehaviour
 
     private void KillPlayer()
     {
+        /*    if (vidas >= 0)
+            {
+
+                vidasText.text = $"Vidas: {vidas}";
+            }
+            else
+            {
+
+                gm.LevelFour();
+                //vidas = iVidas;
+            }*/
+        /* if(vidas == 0 && health <= 0)
+         {
+             gm.LevelFour();
+             vidas = iVidas;
+         }*/
         SpriteRenderer playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
         playerSpriteRenderer.enabled = false;
         rb.bodyType = RigidbodyType2D.Static;
-        StartCoroutine(RespawnPlayer());
+        TakeDamage(20);
+        if (health <= 0)
+        {
+            vidas--;
+            vidasText.text = $"Vidas: {vidas}";
+            health = maxHealth;
+
+        }
+
+        if (vidas <= 0)
+        {
+            gm.LevelFour();
+        }
+        else
+        {
+            StartCoroutine(RespawnPlayer());
+        }
+
+
     }
     IEnumerator RespawnPlayer()
     {
         yield return new WaitForSeconds(0.25f);
-        
+
         player.transform.position = spawn.transform.position;
 
         SpriteRenderer playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
@@ -390,15 +571,20 @@ public class PlayerController : MonoBehaviour
         {
             checkPoint = true;
         }
+        if (collision.gameObject.CompareTag("Ending"))
+        {
+            gm.LevelSelect();
+        }
 
-      
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("confiner"))    
+        if (collision.gameObject.CompareTag("confiner"))
         {
             KillPlayer();
+
         }
     }
 
 }
+
