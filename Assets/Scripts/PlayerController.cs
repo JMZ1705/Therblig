@@ -570,6 +570,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("checkPoint"))
         {
             checkPoint = true;
+            spawn.transform.position = player.transform.position;
         }
         if (collision.gameObject.CompareTag("Ending"))
         {
