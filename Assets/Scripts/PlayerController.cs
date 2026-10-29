@@ -1,4 +1,4 @@
-/* ============================================================================
+    /* ============================================================================
  *  PlayerController.cs
  * ----------------------------------------------------------------------------
  *  ¿QUÉ HACE ESTE SCRIPT?
@@ -141,7 +141,7 @@ public class PlayerController : MonoBehaviour
 
     // --- Interfaz de usuario (UI) ---
     public TextMeshProUGUI healthText;  // El texto en pantalla donde mostramos la vida.
-    public TextMeshProUGUI vidasText;
+    public TextMeshProUGUI vidasText;   
 
     public CinemachineImpulseSource ImpulseSource;
 
@@ -240,8 +240,8 @@ public class PlayerController : MonoBehaviour
 
                 playerAnimator.SetFloat("Direction", direction);
                 playerAnimator.SetBool("isGround", canJump);
-                //yVelocity = rb.linearVelocity.y;
-                //playerAnimator.SetFloat("yVelocity", yVelocity);
+                yVelocity = rb.linearVelocity.y;
+                playerAnimator.SetFloat("yVelocity", yVelocity);
                 }
         }
         else // Me golpearon: el jugador pierde el control por unos instantes.

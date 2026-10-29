@@ -14,8 +14,13 @@ public class UIPauseBehavior : MonoBehaviour
     [SerializeField] private Button resumeButton;
     [SerializeField] private GameObject journalPanel;
     [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private Animator camAnimator;
 
     private bool isPaused = false;
+
+    public void Update(){
+        camAnimator.SetBool("isPaused", isPaused);
+    }
 
     private void OnEnable()
     {
