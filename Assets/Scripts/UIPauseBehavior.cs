@@ -12,6 +12,10 @@ public class UIPauseBehavior : MonoBehaviour
     [SerializeField] private InputActionReference pauseActionReference;
 
     [SerializeField] private Button resumeButton;
+    [SerializeField] private Button journalButton;
+    [SerializeField] private Button settingsButton;
+    [SerializeField] private Button titleButton;
+    
     [SerializeField] private GameObject journalPanel;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private Animator camAnimator;
@@ -58,13 +62,23 @@ public class UIPauseBehavior : MonoBehaviour
     {
         if (journalPanel.activeInHierarchy){
             journalPanel.SetActive(false);
-            pauseMenuPanel.SetActive(true);
-            resumeButton.Select();
+
+            resumeButton.gameObject.SetActive(true);
+            journalButton.gameObject.SetActive(true);
+            settingsButton.gameObject.SetActive(true);
+            titleButton.gameObject.SetActive(true);
+
+            journalButton.Select();
         }
         else if (settingsPanel.activeInHierarchy){
             settingsPanel.SetActive(false);
-            pauseMenuPanel.SetActive(true);
-            resumeButton.Select();
+            
+            resumeButton.gameObject.SetActive(true);
+            journalButton.gameObject.SetActive(true);
+            settingsButton.gameObject.SetActive(true);
+            titleButton.gameObject.SetActive(true);
+
+            settingsButton.Select();
         }
         else{
             isPaused = false;
