@@ -9,6 +9,7 @@ TagManager:
   - Ending
   - checkPoint
   - Enemy
+  - Kill-Planes
   layers:
   - Default
   - TransparentFX

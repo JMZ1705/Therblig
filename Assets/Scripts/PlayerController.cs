@@ -575,6 +575,10 @@ public class PlayerController : MonoBehaviour
         {
             gm.LevelSelect();
         }
+        if (collision.gameObject.CompareTag("Kill-Planes"))
+        {
+            KillPlayer();
+        }
 
     }
     public void OnTriggerExit2D(Collider2D collision)
