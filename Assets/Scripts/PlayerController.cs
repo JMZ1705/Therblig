@@ -1,216 +1,132 @@
-    /* ============================================================================
+/* ============================================================================
  *  PlayerController.cs
  * ----------------------------------------------------------------------------
- *  ¿QUÉ HACE ESTE SCRIPT?
- *  Controla al jugador de una plataforma 2D. Se encarga de:
- *      1. Moverlo horizontalmente (izquierda / derecha).
- *      2. Hacerlo saltar, pero solo si está pisando el suelo.
- *      3. Voltear el sprite para que mire hacia donde camina.
- *      4. Avisarle al Animator qué animación mostrar.
- *      5. Manejar la vida (recibir daño, curarse) y mostrarla en pantalla.
- *      6. Aplicar un "empujón" (knockback) cuando el jugador recibe un golpe.
- *      7. Detectar cuando el jugador toca la llave para abrir la puerta.
- *
- *  ¿DÓNDE SE PONE?
- *  Este script se arrastra al GameObject del jugador.
- *
- *  COMPONENTES QUE NECESITA EL GAMEOBJECT DEL JUGADOR:
- *      - Rigidbody2D      -> para que la física lo mueva y le aplique gravedad.
- *      - Collider2D       -> para chocar con el mundo y detectar triggers.
- *      - Animator         -> para las animaciones (idle, caminar, etc.).
- *      - PlayerInput      -> componente del New Input System que llama a los
- *                            métodos Move() y Jump() de este script.
- *
- *  QUÉ HAY QUE CONFIGURAR EN EL INSPECTOR (¡no se olviden de esto!):
- *      - Speed, JumpForce, HitForce  -> valores numéricos de movimiento.
- *      - Rb                          -> arrastrar el Rigidbody2D del jugador.
- *      - Ground Check                -> arrastrar un GameObject hijo vacío
- *                                       colocado en los pies del jugador.
- *      - Ground Check Radius         -> tamaño del círculo que detecta el piso.
- *      - Ground Layer                -> la Layer que usan los pisos.
- *      - Health / Max Health         -> vida inicial y vida máxima.
- *      - Health Text                 -> arrastrar el objeto de texto (TMP) de la UI.
+ *  Controla al jugador 2D: movimiento, salto, dash, wall slide/jump, vida, UI,
+ *  respawn, empujón (knockback) y ataque a enemigos.
  * ========================================================================= */
 
-
-// ----------------------------------------------------------------------------
-// USINGS: son "librerías" que le decimos a C# que queremos usar.
-// Sin ellas, el compilador no reconoce las clases que escribimos abajo.
-// ----------------------------------------------------------------------------
-using UnityEngine;              // Todo lo básico de Unity: MonoBehaviour, Vector2, Rigidbody2D...
-using UnityEngine.InputSystem;  // El New Input System: nos da InputAction.CallbackContext.
-using TMPro;                    // TextMeshPro: el texto de la UI (TextMeshProUGUI).
+using UnityEngine;
+using UnityEngine.InputSystem;
+using TMPro;
 using Unity.Cinemachine;
-using Unity.VisualScripting;
-using JetBrains.Annotations;
-using System.Collections.Generic;
 using System.Collections;
 
-
-
-// ----------------------------------------------------------------------------
-// LA CLASE
-// "public class PlayerController : MonoBehaviour" significa:
-//   -> Estamos creando un componente llamado PlayerController...
-//   -> ...que HEREDA de MonoBehaviour.
-// Heredar de MonoBehaviour es lo que permite arrastrar el script a un
-// GameObject y que Unity llame automáticamente a Start(), Update(), etc.
-// IMPORTANTE: el nombre de la clase debe ser IDÉNTICO al nombre del archivo.
-// ----------------------------------------------------------------------------
 public class PlayerController : MonoBehaviour
 {
     // ========================================================================
-    // VARIABLES (los "datos" que guarda nuestro jugador)
-    // ------------------------------------------------------------------------
-    // Recordatorio de tipos:
-    //   float  -> número con decimales (ej: 5.5f). La "f" al final es obligatoria.
-    //   bool   -> verdadero o falso (true / false).
-    //   public -> se ve en el Inspector y otros scripts pueden usarla.
-    //   private-> solo se usa DENTRO de este script (más seguro y ordenado).
-    //   [SerializeField] -> truco para que una variable private SÍ aparezca en
-    //                       el Inspector, sin dejar que otros scripts la toquen.
+    // VARIABLES
     // ========================================================================
     public GameObject player;
     public GameObject spawn;
     public GameManager gm;
-    // --- Movimiento horizontal ---
-    public float direction;     // Hacia dónde empuja el jugador: -1 izquierda, 0 quieto, 1 derecha.
-                                // La llena el método Move() cuando el jugador presiona una tecla.
 
-    public float speed;         // Qué tan rápido se mueve. Se ajusta en el Inspector.
-    public Rigidbody2D rb;      // Referencia al Rigidbody2D. Es el componente que mueve
-                                // al jugador usando física (velocidad, fuerzas, gravedad).
+    // --- Movimiento horizontal ---
+    public float direction;
+    public float speed;
+    public Rigidbody2D rb;
 
     // --- Salto ---
-    public float jumpForce;     // Fuerza del impulso del salto.
-    public bool canJump;        // ¿Puede saltar ahora mismo? Será true solo si está en el piso.
+    public float jumpForce;
+    public bool canJump;
 
     // --- Detección de suelo ---
-    // Para saber si el jugador está pisando el piso, dibujamos un círculo
-    // invisible en sus pies y preguntamos: "¿este círculo toca algo del piso?".
-    [SerializeField] private Transform groundCheck;      // Objeto vacío colocado en los pies. De él tomamos la POSICIÓN.
-    [SerializeField] private float groundCheckRadius;    // Radio (tamaño) de ese círculo invisible.
-    [SerializeField] private LayerMask groundLayer;      // Filtro: qué Layers cuentan como "suelo".
-                                                         // Así el círculo no detecta enemigos o monedas.
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundCheckRadius;
+    [SerializeField] private LayerMask groundLayer;
 
-    //--- Dash ---
+    // --- Dash ---
     private bool canDash = true;
     private bool isDashing = false;
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
-
     [SerializeField] private TrailRenderer tr;
 
-    //--- WallSlide---
+    // --- WallSlide ---
     private bool isWallSliding;
     private float wallSlidingSpeed = 0.1f;
 
-    //---WallJump---
+    // --- WallJump ---
     private bool isWallJumping;
     private float wallJumpingDirection;
     private float wallJumpingTime = 0.2f;
     private float wallJumpingCounter;
     private float wallJumpingDuration = 0.4f;
-    private Vector2 wallJumpingPower= new Vector2(0f,8f);
+    private Vector2 wallJumpingPower = new Vector2(0f, 8f);
 
     private int wallJumpCant = 0;
 
-    //--- Deteccion de la pared---
+    // --- Detección de pared ---
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
     // --- Animación y orientación ---
-    public Animator playerAnimator; // Componente que reproduce las animaciones.
-    public bool isFacingRight;      // ¿El sprite está mirando a la derecha? Sirve para no voltearlo dos veces.
+    public Animator playerAnimator;
+    public bool isFacingRight;
     private float yVelocity;
 
     // --- Vida ---
-    public float health;                        // Vida actual del jugador.
-    [SerializeField] private float maxHealth;   // Vida máxima. Es private porque no debería
-                                                // cambiar durante el juego, solo se configura.
+    public float health;
+    [SerializeField] private float maxHealth;
     public int vidas;
     public int iVidas;
 
-    // --- Golpe / knockback (el empujón al recibir daño) ---
-    public float hitForce;      // Con cuánta fuerza sale volando el jugador al ser golpeado.
-    public float hitTime;       // Cuántos segundos dura el empujón. Mientras sea > 0, el
-                                // jugador NO puede controlarse (está "aturdido").
-    public bool hitFromRight;   // ¿El golpe vino desde la derecha? Define hacia dónde sale volando.
+    // --- Golpe / knockback ---
+    public float hitForce;
+    public float hitTime;
+    public bool hitFromRight;
 
-    // --- Interfaz de usuario (UI) ---
-    public TextMeshProUGUI healthText;  // El texto en pantalla donde mostramos la vida.
-    public TextMeshProUGUI vidasText;   
+    // --- UI ---
+    public TextMeshProUGUI healthText;
+    public TextMeshProUGUI vidasText;
 
     public CinemachineImpulseSource ImpulseSource;
 
     public bool checkPoint = false;
 
-
+    // --- Ataque ---
+    [Header("Configuración de Ataque")]
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private float attackRange = 0.5f;
+    [SerializeField] private float attackDamage = 15f;
+    [SerializeField] private LayerMask enemyLayers;
+    [SerializeField] private float attackCooldown = 0.4f;
+    private float nextAttackTime = 0f;
 
     // ========================================================================
     // START()
-    // Unity lo llama UNA SOLA VEZ, automáticamente, antes del primer Update.
-    // Se usa para "preparar" todo antes de que empiece el juego:
-    // buscar componentes, poner valores iniciales, actualizar la UI, etc.
     // ========================================================================
     void Start()
     {
-        // GetComponent<T>() busca un componente de tipo T en ESTE MISMO GameObject.
-        // Aquí guardamos el Animator del jugador para poder usarlo después.
-        // (Hacerlo así evita tener que arrastrarlo a mano en el Inspector.)
         playerAnimator = GetComponent<Animator>();
+        gm = FindFirstObjectByType<GameManager>();
 
-        gm = new GameManager();
-
-        // Escribimos la vida en el texto de la UI.
-        // El signo $ antes de las comillas crea un "string interpolado":
-        // todo lo que va entre { } se reemplaza por el valor de la variable.
-        // Resultado en pantalla, por ejemplo: "Health: 100/100"
         vidas = iVidas;
-        healthText.text = $"Health: {health}/{maxHealth}";
-        vidasText.text = $"Vidas: {vidas}";
+        if (healthText != null) healthText.text = $"Health: {health}/{maxHealth}";
+        if (vidasText != null) vidasText.text = $"Vidas: {vidas}";
     }
 
-
     // ========================================================================
-    // UPDATE()
-    // Unity lo llama AUTOMÁTICAMENTE una vez POR CADA FRAME (cuadro) del juego.
-    // Si el juego corre a 60 FPS, este método se ejecuta 60 veces por segundo.
-    // Aquí va todo lo que debe revisarse constantemente.
+    // FIXEDUPDATE()
     // ========================================================================
-
     void FixedUpdate()
     {
-        if (isDashing == true)
-        {
-            return;
-        }
+        if (isDashing) return;
+        if (isWallJumping) return;
 
-        if (isWallJumping == true)
-        {
-            return;
-        }
-
-
-        // ---- 1. ¿ESTOY EN EL PISO? ----
-        // Physics2D.OverlapCircle() dibuja un círculo invisible y devuelve
-        // true si ese círculo está tocando algún collider de la Layer indicada.
-        // Parámetros: (posición del círculo, radio del círculo, layers a detectar)
-        // Lo guardamos en canJump: si toca el piso -> true, si está en el aire -> false.
+        // 1. Detección de suelo
         canJump = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        if (canJump == true)
+        if (canJump)
         {
             wallJumpCant = 0;
         }
 
-        //Logica del wallslide
-        if (IsWalled() == true && canJump == false && direction != 0f)//Si detecta el muro, no detecta el piso  y su direción es diferente de 0
+        // 2. Lógica de deslizar por la pared (WallSlide)
+        if (IsWalled() && !canJump && direction != 0f)
         {
             isWallSliding = true;
-            // Mientras estés pegado a la pared, el contador se mantiene lleno al máximo
             wallJumpingCounter = wallJumpingTime;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
         }
@@ -218,78 +134,98 @@ public class PlayerController : MonoBehaviour
         {
             isWallSliding = false;
             wallJumpingCounter -= Time.deltaTime;
+        }
 
-            // ---- 2. ¿ME MUEVO YO, O ME ESTÁN EMPUJANDO? ----
-            // Usamos hitTime como un "cronómetro". Si está en 0 o menos, significa
-            // que no me han golpeado (o el golpe ya pasó) y tengo el control.
-           
-        } 
-
+        // 3. Movimiento o aturdimiento por daño
         if (hitTime <= 0)
-        {   
-                if (isWallSliding==true)
+        {
+            if (isWallSliding)
+            {
+                rb.linearVelocity = new Vector2(0f, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
+                if (playerAnimator != null)
                 {
-                   rb.linearVelocity = new Vector2(0f, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
-                   playerAnimator.SetFloat("Direction", 0f);
-                   playerAnimator.SetBool("isGround", canJump);
+                    playerAnimator.SetFloat("Direction", 0f);
+                    playerAnimator.SetBool("isGround", canJump);
                 }
-                else
-                {
-                // MOVIMIENTO NORMAL (Solo actúa si NO estamos en la pared)
+            }
+            else
+            {
                 rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
 
-                playerAnimator.SetFloat("Direction", direction);
-                playerAnimator.SetBool("isGround", canJump);
-                yVelocity = rb.linearVelocity.y;
-                playerAnimator.SetFloat("yVelocity", yVelocity);
+                if (playerAnimator != null)
+                {
+                    playerAnimator.SetFloat("Direction", direction);
+                    playerAnimator.SetBool("isGround", canJump);
+                    yVelocity = rb.linearVelocity.y;
+                    playerAnimator.SetFloat("yVelocity", yVelocity);
                 }
+            }
         }
-        else // Me golpearon: el jugador pierde el control por unos instantes.
+        else // Me golpearon: aplicar empujón
         {
-            if (hitFromRight) // Me pegaron por la derecha, entonces salgo hacia la IZQUIERDA.
+            if (hitFromRight)
             {
-                // hitForce negativo en X = empujón hacia la izquierda.
-                // hitForce positivo en Y = también lo levanta un poco (efecto de "salto" del golpe).
                 rb.linearVelocity = new Vector2(-hitForce, hitForce);
             }
-            else if (!hitFromRight) // Me pegaron por la izquierda...
+            else
             {
-                // Me pegaron por la izquierda, entonces salgo hacia la DERECHA.
                 rb.linearVelocity = new Vector2(hitForce, hitForce);
             }
 
-            // Descontamos el tiempo del cronómetro del golpe.
-            // Time.deltaTime = segundos que pasaron desde el frame anterior.
-            // Restarlo cada frame hace que hitTime baje en SEGUNDOS REALES,
-            // sin importar si el juego corre a 30, 60 o 144 FPS.
             hitTime -= Time.deltaTime;
-            playerAnimator.SetFloat("isHit", hitTime);
+            if (playerAnimator != null)
+            {
+                playerAnimator.SetFloat("isHit", hitTime);
+            }
         }
 
-       
-
-
-
-        // ---- 3. ¿DEBO VOLTEAR EL SPRITE? ----
-        // Comparamos hacia dónde MIRA con hacia dónde SE MUEVE.
-        // El signo ! significa "NO" (niega el valor del bool).
-
-        // Si NO está mirando a la derecha PERO se mueve a la derecha -> voltear.
+        // 4. Orientación del Sprite
         if (!isFacingRight && direction < 0f)
         {
             Flip();
         }
-        // Si SÍ está mirando a la derecha PERO se mueve a la izquierda -> voltear.
         else if (isFacingRight && direction > 0f)
         {
             Flip();
         }
-        // Nota: si direction == 0 (está quieto) no entra a ninguno de los dos,
-        // así que el jugador se queda mirando hacia donde iba. Correcto.
     }
+
+    // ========================================================================
+    // ATAQUE
+    // ========================================================================
+    public void Attack(InputAction.CallbackContext context)
+    {
+        if (context.performed && Time.time >= nextAttackTime && hitTime <= 0)
+        {
+            PerformAttack();
+            nextAttackTime = Time.time + attackCooldown;
+        }
+    }
+
+    private void PerformAttack()
+    {
+        // Se comenta hasta que crees el parámetro en el Animator:
+        // if (playerAnimator != null) playerAnimator.SetTrigger("Attack");
+
+        if (attackPoint == null) return;
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(attackDamage);
+            }
+        }
+    }
+
+    // ========================================================================
+    // DASH
+    // ========================================================================
     public void DashInput(InputAction.CallbackContext context)
     {
-        // Solo se activa al presionar la tecla (performed) y si el jugador puede dashear (canDash) y no está aturdido (hitTime <= 0)
         if (context.performed && canDash && hitTime <= 0)
         {
             StartCoroutine(Dash());
@@ -304,15 +240,13 @@ public class PlayerController : MonoBehaviour
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
 
-        
-        // Si isFacingRight es true, multiplicamos por 1 (derecha). Si es false, por -1 (izquierda).
-        float dashDirection = isFacingRight ? -1f : 1f;//En este caso invertidos porque el sprite está invertido
+        float dashDirection = isFacingRight ? -1f : 1f;
 
         rb.linearVelocity = new Vector3(dashDirection * dashingPower, 0f, 0f);
 
-        tr.emitting = true;
+        if (tr != null) tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
-        tr.emitting = false;
+        if (tr != null) tr.emitting = false;
 
         rb.gravityScale = originalGravity;
         isDashing = false;
@@ -323,273 +257,170 @@ public class PlayerController : MonoBehaviour
 
     private bool IsWalled()
     {
-        return Physics2D.OverlapCircle(wallCheck.position,0.2f,wallLayer);//misma logica que con el canJump
+        if (wallCheck == null) return false;
+        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }
-
-    
 
     private void StopWallJumping()
     {
-        isWallJumping=false;
-
+        isWallJumping = false;
     }
 
     // ========================================================================
-    // MOVE()  -- Método público llamado por el New Input System
-    // ------------------------------------------------------------------------
-    // Este método NO lo llama Unity solo: lo llama el componente PlayerInput.
-    // En el Inspector, dentro de PlayerInput > Events > Move, se arrastra el
-    // jugador y se selecciona PlayerController > Move.
-    //
-    // InputAction.CallbackContext context = "el paquete de información" que
-    // manda el Input System: qué valor tiene la tecla/joystick, en qué estado
-    // está la acción (iniciada, ejecutada, cancelada), etc.
+    // INPUT SYSTEM (MOVE & JUMP)
     // ========================================================================
     public void Move(InputAction.CallbackContext context)
     {
-        // ReadValue<Vector2>() lee el valor de la acción como un Vector2 (X, Y).
-        // Lo usamos así porque la acción Move está configurada como Vector2
-        // (sirve para WASD, flechas y joystick por igual).
-        // Como este es un juego 2D de plataformas, solo nos interesa el eje X,
-        // así que le pedimos ".x" y descartamos el Y.
         direction = context.ReadValue<Vector2>().x;
     }
 
-
-    // ========================================================================
-    // JUMP()  -- También lo llama el Input System (evento Jump)
-    // ========================================================================
     public void Jump(InputAction.CallbackContext context)
     {
-        if (isWallSliding == true)
+        if (isWallSliding)
         {
             isWallJumping = false;
-            wallJumpingDirection = isFacingRight ? -1f : 1f;//para saltar en el sentido contrario del cual se esta mirando
+            wallJumpingDirection = isFacingRight ? -1f : 1f;
             wallJumpingCounter = wallJumpingTime;
             CancelInvoke(nameof(StopWallJumping));
         }
         else
         {
-            wallJumpingCounter -= Time.deltaTime;//Para permitir el walljump por un breve intante lugo de separarse de la pared.
+            wallJumpingCounter -= Time.deltaTime;
         }
-        if (context.performed && wallJumpingCounter > 0f && wallJumpCant<3)
+
+        if (context.performed && wallJumpingCounter > 0f && wallJumpCant < 3)
         {
             isWallJumping = true;
-            rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);//aplica el salto con la fuerza dada en el vector wallJumpingPower
+            rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             wallJumpingCounter = 0f;
             isWallSliding = false;
+
             if ((wallJumpingDirection > 0f && !isFacingRight) || (wallJumpingDirection < 0f && isFacingRight))
             {
                 Flip();
             }
             wallJumpCant++;
-            Invoke(nameof(StopWallJumping), wallJumpingDuration);//invoca el metodo para detener el walljump
+            Invoke(nameof(StopWallJumping), wallJumpingDuration);
         }
-
-      
-        // Doble condición unida por && ("Y"): AMBAS deben ser verdaderas.
-        //   canJump           -> solo salta si está pisando el piso.
-        //   context.performed -> solo en el instante en que se PRESIONA la tecla.
-        // ¿Por qué context.performed? Porque el Input System llama a este método
-        // varias veces (al presionar, al mantener, al soltar). Sin este filtro,
-        // el jugador saltaría 2 o 3 veces con un solo toque.
         else if (canJump && context.performed)
         {
-            // AddForce() aplica una fuerza al Rigidbody2D.
-            //   Vector2.up * jumpForce -> un empujón hacia arriba (0, jumpForce).
-            //   ForceMode2D.Impulse    -> la fuerza se aplica DE GOLPE, en un
-            //                             instante, ideal para un salto.
-            //                             (Force, en cambio, la aplica gradualmente.)
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 
-
     // ========================================================================
-    // FLIP()
-    // ------------------------------------------------------------------------
-    // Método PROPIO (no lo llama Unity, lo llamamos nosotros desde Update).
-    // Voltea el sprite del jugador como si fuera un espejo.
-    // El truco: multiplicar la escala en X por -1.
+    // FLIP
     // ========================================================================
     private void Flip()
     {
-        isFacingRight = !isFacingRight;             // Cambia el estado de la variable
-                                                    // (si era true pasa a false y al revés).
+        isFacingRight = !isFacingRight;
 
-        Vector3 localScale = transform.localScale;  // Guarda la escala actual
-                                                    // (transform es el componente de posición,
-                                                    //  rotación y escala del GameObject).
-        localScale.x *= -1f;                        // Invierte el eje X (espejo)
-                                                    // *= significa "multiplícate por".
-        transform.localScale = localScale;          // Aplica la nueva escala
-                                                    // Hay que reasignarlo completo porque
-                                                    // no se puede modificar localScale.x directo.
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1f;
+        transform.localScale = localScale;
     }
 
-
     // ========================================================================
-    // TAKEDAMAGE()
-    // ------------------------------------------------------------------------
-    // Método público que OTROS scripts llaman (por ejemplo, el enemigo o los
-    // pinchos) para hacerle daño al jugador.
-    // El parámetro "damage" es cuánta vida se le quita.
+    // DAÑO Y RESPNAWN
     // ========================================================================
     public void TakeDamage(float damage)
     {
-        hitTime = 1;
-        health -= damage;   // -= significa "réstate a ti mismo".
-                            // Equivale a: health = health - damage;
+        hitTime = 1f;
+        health -= damage;
 
-        // Actualizamos el texto de la UI para que el jugador vea su vida nueva.
-        healthText.text = $"Health: {health}/{maxHealth}";
+        if (healthText != null) healthText.text = $"Health: {health}/{maxHealth}";
 
-        /*if (health <= 0)
+        if (health <= 0)
         {
-            //playerAnimator.SetBool("isDead", true);
-           //vidas--;
-           KillPlayer();
+            KillPlayer();
         }
-        /*if(vidas <= 0)
-        {
-            
-        }*/
-
     }
 
-
-    // ========================================================================
-    // ADDHEALTH()
-    // ------------------------------------------------------------------------
-    // Cura al jugador (por ejemplo, al recoger un botiquín).
-    // El guion bajo en "_health" es una convención para diferenciar el
-    // PARÁMETRO que llega del método, de la VARIABLE "health" de la clase.
-    // ========================================================================
     public void AddHealth(float _health)
     {
-        // Antes de curar, revisamos que no nos pasemos de la vida máxima.
         if (health + _health > maxHealth)
         {
-            health = maxHealth;     // Si se pasaría, la dejamos exactamente en el tope.
+            health = maxHealth;
         }
         else
         {
-            health += _health;      // Si no se pasa, sumamos normalmente.
-                                    // += significa "súmate a ti mismo".
+            health += _health;
         }
 
-        // Y de nuevo actualizamos la UI.
-        healthText.text = $"Health: {health}/{maxHealth}";
+        if (healthText != null) healthText.text = $"Health: {health}/{maxHealth}";
     }
 
     private void KillPlayer()
     {
-        /*    if (vidas >= 0)
-            {
+        SpriteRenderer playerSpriteRenderer = player != null ? player.GetComponent<SpriteRenderer>() : GetComponent<SpriteRenderer>();
+        if (playerSpriteRenderer != null) playerSpriteRenderer.enabled = false;
 
-                vidasText.text = $"Vidas: {vidas}";
-            }
-            else
-            {
+        if (rb != null) rb.bodyType = RigidbodyType2D.Static;
 
-                gm.LevelFour();
-                //vidas = iVidas;
-            }*/
-        /* if(vidas == 0 && health <= 0)
-         {
-             gm.LevelFour();
-             vidas = iVidas;
-         }*/
-        SpriteRenderer playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
-        playerSpriteRenderer.enabled = false;
-        rb.bodyType = RigidbodyType2D.Static;
-        TakeDamage(20);
         if (health <= 0)
         {
             vidas--;
-            vidasText.text = $"Vidas: {vidas}";
+            if (vidasText != null) vidasText.text = $"Vidas: {vidas}";
             health = maxHealth;
-
         }
 
         if (vidas <= 0)
         {
-            gm.LevelFour();
+            if (gm != null) gm.LevelFour();
         }
         else
         {
             StartCoroutine(RespawnPlayer());
         }
-
-
     }
+
     IEnumerator RespawnPlayer()
     {
         yield return new WaitForSeconds(0.25f);
 
-        player.transform.position = spawn.transform.position;
+        if (player != null && spawn != null)
+        {
+            player.transform.position = spawn.transform.position;
+        }
 
-        SpriteRenderer playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
-        playerSpriteRenderer.enabled = true;
-        rb.bodyType = RigidbodyType2D.Dynamic;
+        SpriteRenderer playerSpriteRenderer = player != null ? player.GetComponent<SpriteRenderer>() : GetComponent<SpriteRenderer>();
+        if (playerSpriteRenderer != null) playerSpriteRenderer.enabled = true;
+
+        if (rb != null) rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
+    // ========================================================================
+    // TRIGGERS
+    // ========================================================================
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        /*if (collision.gameObject.CompareTag("Vida1"))
-        {
-            collision.gameObject.SetActive(false);
-            AddHealth(+25f);
-            
-
-        }
-        if (collision.gameObject.CompareTag("Vida2"))
-        {
-            collision.gameObject.SetActive(false);
-            
-            maxHealth = (maxHealth+50f);
-
-            AddHealth(maxHealth);
-            
-
-        }
-        if (collision.gameObject.CompareTag("Hurt1"))
-        {
-            collision.gameObject.SetActive(false);
-            TakeDamage(25f);
-            ImpulseSource.GenerateImpulse(20f);
-
-        }
-        if (collision.gameObject.CompareTag("Hurt2"))
-        {
-            collision.gameObject.SetActive(false);
-            TakeDamage(75f);
-            ImpulseSource.GenerateImpulse(50f);
-        }*/
-
         if (collision.gameObject.CompareTag("checkPoint"))
         {
             checkPoint = true;
-            spawn.transform.position = player.transform.position;
+            if (spawn != null && player != null) spawn.transform.position = player.transform.position;
         }
         if (collision.gameObject.CompareTag("Ending"))
         {
-            gm.LevelSelect();
+            if (gm != null) gm.LevelSelect();
         }
         if (collision.gameObject.CompareTag("Kill-Planes"))
         {
             KillPlayer();
         }
-
     }
+
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("confiner"))
         {
             KillPlayer();
-
         }
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null) return;
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
 }
-

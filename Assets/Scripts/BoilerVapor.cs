@@ -4,32 +4,29 @@ using UnityEngine;
 public class BoilerVapor : MonoBehaviour
 {
     [Header("Configuración del Ciclo")]
-    [SerializeField] private float activeDuration = 2.0f;   // Tiempo encendido
-    [SerializeField] private float inactiveDuration = 3.0f; // Tiempo apagado
-    [SerializeField] private float initialDelay = 0.0f;    // Desfase inicial
+    [SerializeField] private float activeDuration = 2.0f;   
+    [SerializeField] private float inactiveDuration = 3.0f; 
+    [SerializeField] private float initialDelay = 0.0f;    
 
-    [Header("Daño")]
-    [SerializeField] private float damageAmount = 5.0f;    // Cantidad de daño por cada golpe
-    [SerializeField] private float damageInterval = 0.5f;   // Frecuencia del daño
+    [Header("Daño y Empujón")]
+    [SerializeField] private float damageAmount = 5.0f;    
+    [SerializeField] private float damageInterval = 0.5f;   
+    [SerializeField] private float knockbackForce = 6.0f;   
 
     [Header("Referencias")]
-    [SerializeField] private ParticleSystem vaporParticles;
-    [SerializeField] private Collider2D vaporDamageCollider; // Debe ser Trigger
+    [SerializeField] private SpriteRenderer vaporSprite;
+    [SerializeField] private Collider2D vaporDamageCollider;
 
     private bool isVaporActive = false;
     private Coroutine damageCoroutine;
 
     private void Start()
     {
-        if (vaporDamageCollider != null)
-        {
-            vaporDamageCollider.enabled = false;
-        }
+        if (vaporSprite == null) vaporSprite = GetComponent<SpriteRenderer>();
+        if (vaporDamageCollider == null) vaporDamageCollider = GetComponent<Collider2D>();
 
-        if (vaporParticles != null)
-        {
-            vaporParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-        }
+        if (vaporDamageCollider != null) vaporDamageCollider.enabled = false;
+        if (vaporSprite != null) vaporSprite.enabled = false;
 
         StartCoroutine(VaporCycleRoutine());
     }
@@ -43,29 +40,17 @@ public class BoilerVapor : MonoBehaviour
 
         while (true)
         {
-            // --- ENCENDER VAPOR ---
+           
             isVaporActive = true;
-            if (vaporParticles != null)
-            {
-                vaporParticles.Play();
-            }
-            if (vaporDamageCollider != null)
-            {
-                vaporDamageCollider.enabled = true;
-            }
+            if (vaporSprite != null) vaporSprite.enabled = true;
+            if (vaporDamageCollider != null) vaporDamageCollider.enabled = true;
 
             yield return new WaitForSeconds(activeDuration);
 
-            // --- APAGAR VAPOR Y LIMPIAR ---
+            
             isVaporActive = false;
-            if (vaporParticles != null)
-            {
-                vaporParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-            }
-            if (vaporDamageCollider != null)
-            {
-                vaporDamageCollider.enabled = false;
-            }
+            if (vaporSprite != null) vaporSprite.enabled = false;
+            if (vaporDamageCollider != null) vaporDamageCollider.enabled = false;
 
             yield return new WaitForSeconds(inactiveDuration);
         }
@@ -77,9 +62,14 @@ public class BoilerVapor : MonoBehaviour
 
         PlayerController player = other.GetComponentInParent<PlayerController>();
 
-        if (player != null && damageCoroutine == null)
+        if ((player != null || other.CompareTag("Player")) && damageCoroutine == null)
         {
-            damageCoroutine = StartCoroutine(ApplyDamageOverTime(player));
+            if (player == null) player = other.GetComponent<PlayerController>();
+
+            if (player != null)
+            {
+                damageCoroutine = StartCoroutine(ApplyDamageOverTime(player));
+            }
         }
     }
 
@@ -87,7 +77,7 @@ public class BoilerVapor : MonoBehaviour
     {
         PlayerController player = other.GetComponentInParent<PlayerController>();
 
-        if (player != null && damageCoroutine != null)
+        if ((player != null || other.CompareTag("Player")) && damageCoroutine != null)
         {
             StopCoroutine(damageCoroutine);
             damageCoroutine = null;
@@ -98,11 +88,15 @@ public class BoilerVapor : MonoBehaviour
     {
         while (isVaporActive && player != null)
         {
-            // Llama al método oficial del jugador para aplicar daño y actualizar la UI correctamente
+            
             player.TakeDamage(damageAmount);
 
-            // Desactiva el aturdimiento/bloqueo de movimiento para que el jugador pueda seguir moviéndose
-            player.hitTime = 0;
+            
+            player.hitTime = 0.3f; 
+            player.hitForce = knockbackForce; 
+
+           
+            player.hitFromRight = transform.position.x > player.transform.position.x;
 
             Debug.Log($"<color=red>¡Daño de Caldera!</color> Vida restante: {player.health}");
 

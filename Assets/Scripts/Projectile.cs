@@ -16,7 +16,6 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        
         Destroy(gameObject, lifeTime);
     }
 
@@ -35,11 +34,7 @@ public class Projectile : MonoBehaviour
         }
 
         
-        PlayerController player = other.GetComponent<PlayerController>();
-        if (player == null)
-        {
-            player = other.GetComponentInParent<PlayerController>();
-        }
+        PlayerController player = other.GetComponentInParent<PlayerController>();
 
         if (player != null || other.CompareTag("Player"))
         {
@@ -48,13 +43,13 @@ public class Projectile : MonoBehaviour
                 
                 player.TakeDamage(damage);
 
-               
-                player.hitTime = 0.2f;
+                
+                player.hitTime = 0.4f;
                 player.hitForce = knockbackForce;
                 player.hitFromRight = transform.position.x > player.transform.position.x;
             }
 
-            
+           
             Destroy(gameObject);
             return;
         }
