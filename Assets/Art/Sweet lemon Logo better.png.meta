@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 2c3e4090586829146894f7de223a2736
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5711406814522549517
+    second: Sweet lemon Logo better_0
+  - first:
+      213: 5758579382611961229
+    second: Sweet lemon Logo better_1
+  - first:
+      213: -2776434752420414832
+    second: Sweet lemon Logo better_2
+  - first:
+      213: -2526593691143879728
+    second: Sweet lemon Logo better_3
+  - first:
+      213: -7802659260330335944
+    second: Sweet lemon Logo better_4
+  - first:
+      213: 4539160424811281298
+    second: Sweet lemon Logo better_5
+  - first:
+      213: 7712457083863654726
+    second: Sweet lemon Logo better_6
+  - first:
+      213: -3511475837158592428
+    second: Sweet lemon Logo better_7
+  - first:
+      213: -1761660686595237971
+    second: Sweet lemon Logo better_8
+  - first:
+      213: -600874341318724369
+    second: Sweet lemon Logo better_9
+  - first:
+      213: -4569322775363620699
+    second: Sweet lemon Logo better_10
+  - first:
+      213: -2170700531061127897
+    second: Sweet lemon Logo better_11
+  - first:
+      213: 824337595805526133
+    second: Sweet lemon Logo better_12
+  - first:
+      213: 740584273855691162
+    second: Sweet lemon Logo better_13
+  - first:
+      213: -2669703155137196562
+    second: Sweet lemon Logo better_14
+  - first:
+      213: -7767070792593066673
+    second: Sweet lemon Logo better_15
+  - first:
+      213: -6545364679435998011
+    second: Sweet lemon Logo better_16
+  - first:
+      213: 7584230655851028607
+    second: Sweet lemon Logo better_17
+  - first:
+      213: 707702791697215791
+    second: Sweet lemon Logo better_18
+  - first:
+      213: -4844834593486188005
+    second: Sweet lemon Logo better_19
+  - first:
+      213: 2053093194808181214
+    second: Sweet lemon Logo better_20
+  - first:
+      213: 7039218625380014026
+    second: Sweet lemon Logo better_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_0
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 793
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d05ac5bcc3ef24f40800000000000000
+      internalID: 5711406814522549517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_1
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 468
+        width: 253
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d85697f20759aef40800000000000000
+      internalID: 5758579382611961229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_2
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 670
+        width: 33
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09a7ee78d4f1879d0800000000000000
+      internalID: -2776434752420414832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_3
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 671
+        width: 73
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d340a3ac6cbfecd0800000000000000
+      internalID: -2526593691143879728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 595
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83129943eb267b390800000000000000
+      internalID: -7802659260330335944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_5
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 605
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b336b5b565efe30800000000000000
+      internalID: 4539160424811281298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_6
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 311
+        width: 324
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641632dfad6280b60800000000000000
+      internalID: 7712457083863654726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_7
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 588
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4507bc8a45bb44fc0800000000000000
+      internalID: -3511475837158592428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_8
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 477
+        width: 115
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da758b070f25d87e0800000000000000
+      internalID: -1761660686595237971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_9
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 478
+        width: 92
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4fc0b58f349a7f0800000000000000
+      internalID: -600874341318724369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_10
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 479
+        width: 103
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a0795625218690c0800000000000000
+      internalID: -4569322775363620699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_11
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 479
+        width: 161
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 725895c2e5f10e1e0800000000000000
+      internalID: -2170700531061127897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_12
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 478
+        width: 103
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578ecf40da2a07b00800000000000000
+      internalID: 824337595805526133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_13
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 478
+        width: 103
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99b8692975174a00800000000000000
+      internalID: 740584273855691162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_14
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 478
+        width: 102
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eedce46002f43fad0800000000000000
+      internalID: -2669703155137196562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_15
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 479
+        width: 178
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45bd2e0442d53490800000000000000
+      internalID: -7767070792593066673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_16
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 478
+        width: 106
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc24dcb0813a25a0800000000000000
+      internalID: -6545364679435998011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_17
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 479
+        width: 115
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70e0a83999904960800000000000000
+      internalID: 7584230655851028607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_18
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 431
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f213aa180f342d900800000000000000
+      internalID: 707702791697215791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_19
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 439
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b125bb33b90b3ccb0800000000000000
+      internalID: -4844834593486188005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_20
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 420
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed14057026d0e7c10800000000000000
+      internalID: 2053093194808181214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweet lemon Logo better_21
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 275
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7d61e5b0450b160800000000000000
+      internalID: 7039218625380014026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sweet lemon Logo better_0: 5711406814522549517
+      Sweet lemon Logo better_1: 5758579382611961229
+      Sweet lemon Logo better_10: -4569322775363620699
+      Sweet lemon Logo better_11: -2170700531061127897
+      Sweet lemon Logo better_12: 824337595805526133
+      Sweet lemon Logo better_13: 740584273855691162
+      Sweet lemon Logo better_14: -2669703155137196562
+      Sweet lemon Logo better_15: -7767070792593066673
+      Sweet lemon Logo better_16: -6545364679435998011
+      Sweet lemon Logo better_17: 7584230655851028607
+      Sweet lemon Logo better_18: 707702791697215791
+      Sweet lemon Logo better_19: -4844834593486188005
+      Sweet lemon Logo better_2: -2776434752420414832
+      Sweet lemon Logo better_20: 2053093194808181214
+      Sweet lemon Logo better_21: 7039218625380014026
+      Sweet lemon Logo better_3: -2526593691143879728
+      Sweet lemon Logo better_4: -7802659260330335944
+      Sweet lemon Logo better_5: 4539160424811281298
+      Sweet lemon Logo better_6: 7712457083863654726
+      Sweet lemon Logo better_7: -3511475837158592428
+      Sweet lemon Logo better_8: -1761660686595237971
+      Sweet lemon Logo better_9: -600874341318724369
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
