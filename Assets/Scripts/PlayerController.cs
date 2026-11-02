@@ -423,4 +423,13 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+
+    // ========================================================================
+    // MEJORA DE DAÑO (HAMMER / PICKUPS)
+    // ========================================================================
+    public void UpgradeDamage(float extraDamage)
+    {
+        attackDamage += extraDamage;
+        Debug.Log($"<color=cyan>¡Nuevo daño de ataque del personaje: {attackDamage}!</color>");
+    }
 }
