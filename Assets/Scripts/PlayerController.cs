@@ -204,10 +204,10 @@ public class PlayerController : MonoBehaviour
 
     private void PerformAttack()
     {
-        // Se comenta hasta que crees el parámetro en el Animator:
-        // if (playerAnimator != null) playerAnimator.SetTrigger("Attack");
+        if (playerAnimator != null) playerAnimator.SetTrigger("Attack");
 
         if (attackPoint == null) return;
+
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
@@ -273,6 +273,7 @@ public class PlayerController : MonoBehaviour
     {
         direction = context.ReadValue<Vector2>().x;
     }
+
 
     public void Jump(InputAction.CallbackContext context)
     {
