@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -5,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public Animator transitionAnimator;
+    public float transitionTime = 0.5f;
    
     public void QuitGame(){
         Application.Quit();
@@ -14,34 +18,39 @@ public class GameManager : MonoBehaviour
         #endif
     }
     public void LoadTitleScreen(){
-        SceneManager.LoadScene("Menu Principal", LoadSceneMode.Single);
+        StartCoroutine(LoadScene(0));
     }
     public void LevelSelect()
     {
-        SceneManager.LoadScene("Level Select", LoadSceneMode.Single);
+        StartCoroutine(LoadScene(1));
     }
     public void LevelOne()
     {
-        SceneManager.LoadScene("N1 Inicio", LoadSceneMode.Single);
+        StartCoroutine(LoadScene(2));
     }
     public void LevelTwo()
     {
-        SceneManager.LoadScene("N2 Engranajes", LoadSceneMode.Single);
+        StartCoroutine(LoadScene(3));
     }
     public void LevelThree()
     {
-        SceneManager.LoadScene("N3 Calderas", LoadSceneMode.Single);
+        StartCoroutine(LoadScene(4));
     }
     public void LevelFour()
     {
-        SceneManager.LoadScene("N4 Bandas T", LoadSceneMode.Single);
+        StartCoroutine(LoadScene(5));
     }
     public void LevelFive()
     {
-        SceneManager.LoadScene("N5 FinalBoss", LoadSceneMode.Single);
+        StartCoroutine(LoadScene(6));
     }
     public void LevelSix()
     {
-        SceneManager.LoadScene("N6 Final", LoadSceneMode.Single);
+        StartCoroutine(LoadScene(7));
+    }
+    IEnumerator LoadScene(int sceneIndex){
+        transitionAnimator.SetTrigger("End");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(sceneIndex);
     }
 }
