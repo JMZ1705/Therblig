@@ -19,6 +19,9 @@ public class UIPauseBehavior : MonoBehaviour
     [SerializeField] private GameObject journalPanel;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private Animator camAnimator;
+    public AudioClip openSound;
+    public AudioClip closeSound;
+    public AudioSource canvasAudioSource;
 
     private bool isPaused = false;
 
@@ -54,6 +57,7 @@ public class UIPauseBehavior : MonoBehaviour
     {
         isPaused = true;
         pauseMenuPanel.SetActive(true);
+        canvasAudioSource.PlayOneShot(openSound);
         resumeButton.Select();
         Time.timeScale = 0f; // Detiene el tiempo del juego
     }
@@ -83,6 +87,7 @@ public class UIPauseBehavior : MonoBehaviour
         else{
             isPaused = false;
             pauseMenuPanel.SetActive(false);
+            canvasAudioSource.PlayOneShot(closeSound);
             Time.timeScale = 1f; // Reanuda el tiempo del juego
 
         }
