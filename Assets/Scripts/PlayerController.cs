@@ -93,7 +93,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask enemyLayers;
     [SerializeField] private float attackCooldown = 0.4f;
     private float nextAttackTime = 0f;
+    //--- Bandas ---
 
+    private float BandasForce = 0f;
     // ========================================================================
     // START()
     // ========================================================================
@@ -150,7 +152,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+                rb.linearVelocity = new Vector2((direction * speed) + BandasForce, rb.linearVelocity.y);
 
                 if (playerAnimator != null)
                 {
@@ -432,5 +434,22 @@ public class PlayerController : MonoBehaviour
     {
         attackDamage += extraDamage;
         Debug.Log($"<color=cyan>¡Nuevo daño de ataque del personaje: {attackDamage}!</color>");
+    }
+
+    // Para las bandas
+
+    public void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("bandaIzq"))
+        {
+            BandasForce = -5f;
+        }
+    }
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("bandaIzq"))
+        {
+            BandasForce = 0f;
+        }
     }
 }
