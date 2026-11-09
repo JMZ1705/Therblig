@@ -12,6 +12,8 @@ TagManager:
   - Kill-Planes
   - bandaIzq
   - bandaDer
+  - AcGear
+  - CwGear
   layers:
   - Default
   - TransparentFX
