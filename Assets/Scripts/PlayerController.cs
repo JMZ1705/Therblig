@@ -2,7 +2,7 @@
  *  PlayerController.cs
  * ----------------------------------------------------------------------------
  *  Controla al jugador 2D: movimiento, salto, dash, wall slide/jump, vida, UI,
- *  respawn seguro, empujón (knockback), ataque normal y ataque en picada.
+ *  respawn seguro, empujón (knockback) con REBOTE LARGO, ataque normal y picada.
  * ========================================================================= */
 
 using UnityEngine;
@@ -67,13 +67,16 @@ public class PlayerController : MonoBehaviour
     private float yVelocity;
 
     // --- Vida ---
-    public float health;
-    [SerializeField] private float maxHealth;
+    public float health = 100f;
+    [SerializeField] private float maxHealth = 100f;
     public int vidas;
     public int iVidas;
 
-    // --- Golpe / knockback ---
-    public float hitForce;
+    // --- Golpe / knockback LEJANO ---
+    [Header("Configuración de Knockback (Rebote Lejano)")]
+    public float hitForce = 18f;             // Fuerza horizontal (Subida de 12 a 18 para lanzarlo lejos)
+    public float hitUpForce = 12f;           // Fuerza vertical (Subida de 7 a 12 para elevarlo bien)
+    public float hitDuration = 0.45f;         // Tiempo de vuelo sin control del jugador
     public float hitTime;
     public bool hitFromRight;
 
@@ -96,9 +99,9 @@ public class PlayerController : MonoBehaviour
 
     // --- Ataque en Picada ---
     [Header("Configuración de Ataque en Picada")]
-    [SerializeField] private float diveForce = 8f;      // Fuerza hacia abajo al atacar en el aire
-    [SerializeField] private float diveDamage = 25f;     // Daño que hace el golpe en picada
-    private bool isDiving = false;                       // Controla si está cayendo en picada
+    [SerializeField] private float diveForce = 8f;
+    [SerializeField] private float diveDamage = 25f;
+    private bool isDiving = false;
 
     // --- Bandas ---
     private float BandasForce = 0f;
@@ -114,9 +117,10 @@ public class PlayerController : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         gm = FindFirstObjectByType<GameManager>();
 
+        if (rb == null) rb = GetComponent<Rigidbody2D>();
+
         vidas = iVidas;
-        if (healthText != null) healthText.text = $"Health: {health}/{maxHealth}";
-        if (vidasText != null) vidasText.text = $"Vidas: {vidas}";
+        UpdateUI();
     }
 
     // ========================================================================
@@ -135,7 +139,7 @@ public class PlayerController : MonoBehaviour
             wallJumpCant = 0;
             if (isDiving)
             {
-                isDiving = false; // Cancela la picada al tocar tierra
+                isDiving = false;
             }
         }
 
@@ -152,7 +156,7 @@ public class PlayerController : MonoBehaviour
             wallJumpingCounter -= Time.deltaTime;
         }
 
-        // 3. Movimiento o aturdimiento por daño
+        // 3. Movimiento normal vs Estado de Knockback (Daño)
         if (hitTime <= 0)
         {
             if (isWallSliding)
@@ -177,17 +181,9 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        else // Me golpearon: aplicar empujón
+        else
         {
-            if (hitFromRight)
-            {
-                rb.linearVelocity = new Vector2(-hitForce, hitForce);
-            }
-            else
-            {
-                rb.linearVelocity = new Vector2(hitForce, hitForce);
-            }
-
+            // Mientras dura el rebote, descontamos el temporizador sin intervenir la física del vuelo
             hitTime -= Time.deltaTime;
             if (playerAnimator != null)
             {
@@ -202,13 +198,16 @@ public class PlayerController : MonoBehaviour
         }
 
         // 4. Orientación del Sprite
-        if (!isFacingRight && direction < 0f)
+        if (hitTime <= 0)
         {
-            Flip();
-        }
-        else if (isFacingRight && direction > 0f)
-        {
-            Flip();
+            if (!isFacingRight && direction < 0f)
+            {
+                Flip();
+            }
+            else if (isFacingRight && direction > 0f)
+            {
+                Flip();
+            }
         }
     }
 
@@ -226,14 +225,12 @@ public class PlayerController : MonoBehaviour
 
     private void PerformAttack()
     {
-        // Si el personaje NO está en el suelo, realiza el ataque en picada
         if (!canJump)
         {
             PerformDiveAttack();
             return;
         }
 
-        // --- ATAQUE NORMAL (En el suelo) ---
         if (playerAnimator != null) playerAnimator.SetTrigger("Attack");
 
         ExecuteHitDetection(attackDamage);
@@ -242,14 +239,8 @@ public class PlayerController : MonoBehaviour
     private void PerformDiveAttack()
     {
         isDiving = true;
-
-        // Dispara el parámetro de picada en el Animator
         if (playerAnimator != null) playerAnimator.SetTrigger("DiveAttack");
-
-        // Impulsa al jugador velozmente hacia abajo
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, -diveForce);
-
-        // Hace la prueba de impacto con el daño de picada
         ExecuteHitDetection(diveDamage);
     }
 
@@ -261,7 +252,6 @@ public class PlayerController : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            // 1. Detectar si el objetivo es el Jefe Final
             BossEnemy boss = enemy.GetComponent<BossEnemy>();
             if (boss != null)
             {
@@ -269,7 +259,6 @@ public class PlayerController : MonoBehaviour
                 continue;
             }
 
-            // 2. Detectar si es un enemigo común
             EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
@@ -298,7 +287,6 @@ public class PlayerController : MonoBehaviour
         rb.gravityScale = 0f;
 
         float dashDirection = isFacingRight ? -1f : 1f;
-
         rb.linearVelocity = new Vector3(dashDirection * dashingPower, 0f, 0f);
 
         if (tr != null) tr.emitting = true;
@@ -333,6 +321,8 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
+        if (hitTime > 0) return;
+
         if (isWallSliding)
         {
             isWallJumping = false;
@@ -378,14 +368,44 @@ public class PlayerController : MonoBehaviour
     }
 
     // ========================================================================
-    // DAÑO Y RESPAWN
+    // DAÑO, EMPUJÓN Y REBOTE PARABÓLICO LEJOS
     // ========================================================================
+    public void ApplyKnockbackAndDamage(float damage, bool fromRight)
+    {
+        hitFromRight = fromRight;
+        TakeDamage(damage);
+
+        if (gameObject.activeInHierarchy)
+        {
+            StopCoroutine(nameof(KnockbackRoutine));
+            StartCoroutine(KnockbackRoutine());
+        }
+    }
+
+    private IEnumerator KnockbackRoutine()
+    {
+        hitTime = hitDuration;
+
+        if (rb != null)
+        {
+            // Reset de velocidades previas
+            rb.linearVelocity = Vector2.zero;
+
+            float knockDir = hitFromRight ? -1f : 1f;
+
+            // Asigna un vector directo de alta velocidad horizontal y vertical (Volando lejos)
+            rb.linearVelocity = new Vector2(knockDir * hitForce, hitUpForce);
+        }
+
+        yield return new WaitForSeconds(hitDuration);
+    }
+
     public void TakeDamage(float damage)
     {
-        hitTime = 1f;
         health -= damage;
+        if (health < 0) health = 0;
 
-        if (healthText != null) healthText.text = $"Health: {health}/{maxHealth}";
+        UpdateUI();
 
         if (health <= 0)
         {
@@ -404,7 +424,13 @@ public class PlayerController : MonoBehaviour
             health += _health;
         }
 
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
         if (healthText != null) healthText.text = $"Health: {health}/{maxHealth}";
+        if (vidasText != null) vidasText.text = $"Vidas: {vidas}";
     }
 
     private void KillPlayer()
@@ -417,7 +443,7 @@ public class PlayerController : MonoBehaviour
         if (health <= 0)
         {
             vidas--;
-            if (vidasText != null) vidasText.text = $"Vidas: {vidas}";
+            UpdateUI();
             health = maxHealth;
         }
 
@@ -427,7 +453,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // Verificación previa para evitar la excepción de corrutina en objetos inactivos
             if (gameObject.activeInHierarchy)
             {
                 StartCoroutine(RespawnPlayer());

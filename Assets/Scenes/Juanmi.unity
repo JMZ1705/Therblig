@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 98190037}
   m_Layer: 0
   m_Name: 'Player '
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -686,7 +686,9 @@ MonoBehaviour:
   maxHealth: 100
   vidas: 2
   iVidas: 1
-  hitForce: 0
+  hitForce: 3
+  hitUpForce: 3
+  hitDuration: 0.35
   hitTime: 0
   hitFromRight: 0
   healthText: {fileID: 534551306}
