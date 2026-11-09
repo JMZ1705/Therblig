@@ -96,6 +96,8 @@ public class PlayerController : MonoBehaviour
     //--- Bandas ---
 
     private float BandasForce = 0f;
+    //--- Checkpoint Animator --
+    [SerializeField] private Animator checkpointAnimator;
     // ========================================================================
     // START()
     // ========================================================================
@@ -114,6 +116,7 @@ public class PlayerController : MonoBehaviour
     // ========================================================================
     void FixedUpdate()
     {
+        
         if (isDashing) return;
         if (isWallJumping) return;
 
@@ -180,6 +183,8 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.SetFloat("isHit", hitTime);
             }
         }
+        // Animacion Checkpoint
+        checkpointAnimator.SetBool("HasCheckpoint", checkPoint);
 
         // 4. Orientación del Sprite
         if (!isFacingRight && direction < 0f)
@@ -400,7 +405,11 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("checkPoint"))
         {
             checkPoint = true;
-            if (spawn != null && player != null) spawn.transform.position = player.transform.position;
+            if (spawn != null && player != null)
+            {
+                spawn.transform.position = player.transform.position;
+            }
+            
         }
         if (collision.gameObject.CompareTag("Ending"))
         {
