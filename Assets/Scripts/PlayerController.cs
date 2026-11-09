@@ -417,6 +417,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Kill-Planes"))
         {
+            TakeDamage(50);
             KillPlayer();
         }
     }
@@ -425,6 +426,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("confiner"))
         {
+            TakeDamage(50);
             KillPlayer();
         }
     }
