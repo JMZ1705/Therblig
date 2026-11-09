@@ -1,0 +1,1469 @@
+fileFormatVersion: 2
+guid: 1414bbc06b6051349bf40dcabbb4b802
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1028991768334459010
+    second: tuto_dash0000_0
+  - first:
+      213: -7943706109223881080
+    second: tuto_dash0000_1
+  - first:
+      213: -8086325987763996750
+    second: tuto_dash0000_2
+  - first:
+      213: -3905749685089852076
+    second: tuto_dash0000_3
+  - first:
+      213: -8802761255802516107
+    second: tuto_dash0000_4
+  - first:
+      213: -4535438443250904951
+    second: tuto_dash0000_5
+  - first:
+      213: -3436662015486965470
+    second: tuto_dash0000_6
+  - first:
+      213: -2725487738231547520
+    second: tuto_dash0000_7
+  - first:
+      213: 366915875753223877
+    second: tuto_dash0000_8
+  - first:
+      213: -1097619021999363462
+    second: tuto_dash0000_9
+  - first:
+      213: 2457160195941470119
+    second: tuto_dash0000_10
+  - first:
+      213: 2881435479634266327
+    second: tuto_dash0000_11
+  - first:
+      213: -8372936598872567001
+    second: tuto_dash0000_12
+  - first:
+      213: 4578867321372541375
+    second: tuto_dash0000_13
+  - first:
+      213: -3215820370223516954
+    second: tuto_dash0000_14
+  - first:
+      213: 8907310002626162347
+    second: tuto_dash0000_15
+  - first:
+      213: -8297195564621914418
+    second: tuto_dash0000_16
+  - first:
+      213: -8150351292973495519
+    second: tuto_dash0000_17
+  - first:
+      213: 8087193244126232357
+    second: tuto_dash0000_18
+  - first:
+      213: 6613870069059045248
+    second: tuto_dash0000_19
+  - first:
+      213: -210901774039515265
+    second: tuto_dash0000_20
+  - first:
+      213: 9170803143924956519
+    second: tuto_dash0000_21
+  - first:
+      213: -340065268685170152
+    second: tuto_dash0000_22
+  - first:
+      213: 5981537914629400642
+    second: tuto_dash0000_23
+  - first:
+      213: -2763972667138776526
+    second: tuto_dash0000_24
+  - first:
+      213: -4544576649677736932
+    second: tuto_dash0000_25
+  - first:
+      213: -7812228008162084296
+    second: tuto_dash0000_26
+  - first:
+      213: -3068665103001941546
+    second: tuto_dash0000_27
+  - first:
+      213: 7573222881592377172
+    second: tuto_dash0000_28
+  - first:
+      213: 2584947716544639772
+    second: tuto_dash0000_29
+  - first:
+      213: 6078574846168021572
+    second: tuto_dash0000_30
+  - first:
+      213: 5155142754461305486
+    second: tuto_dash0000_31
+  - first:
+      213: 5022842605381205534
+    second: tuto_dash0000_32
+  - first:
+      213: -8630309140843521245
+    second: tuto_dash0000_33
+  - first:
+      213: 6909063407228201600
+    second: tuto_dash0000_34
+  - first:
+      213: 3042118939695451266
+    second: tuto_dash0000_35
+  - first:
+      213: 4628360006043814819
+    second: tuto_dash0000_36
+  - first:
+      213: -4662742407290256220
+    second: tuto_dash0000_37
+  - first:
+      213: 412804153055129450
+    second: tuto_dash0000_38
+  - first:
+      213: 3024600029461351696
+    second: tuto_dash0000_39
+  - first:
+      213: -2904546421467414969
+    second: tuto_dash0000_40
+  - first:
+      213: 7123042428814827259
+    second: tuto_dash0000_41
+  - first:
+      213: 5563776189268556262
+    second: tuto_dash0000_42
+  - first:
+      213: -8296977952798035295
+    second: tuto_dash0000_43
+  - first:
+      213: 523453791953743622
+    second: tuto_dash0000_44
+  - first:
+      213: -8577815002127061843
+    second: tuto_dash0000_45
+  - first:
+      213: -6326150418351622759
+    second: tuto_dash0000_46
+  - first:
+      213: 6063849253291560144
+    second: tuto_dash0000_47
+  - first:
+      213: 721426279748543618
+    second: tuto_dash0000_48
+  - first:
+      213: -7025559093792708819
+    second: tuto_dash0000_49
+  - first:
+      213: 4279885025021897993
+    second: tuto_dash0000_50
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 425
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tuto_dash0000_0
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 898
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 280606cbf86b74e00800000000000000
+      internalID: 1028991768334459010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_1
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 931
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8863c97916942c190800000000000000
+      internalID: -7943706109223881080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_2
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 925
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b731597b5997cf80800000000000000
+      internalID: -8086325987763996750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_3
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 834
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45520aeda5dfbc9c0800000000000000
+      internalID: -3905749685089852076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_4
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 874
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57dc151e64f46d580800000000000000
+      internalID: -8802761255802516107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_5
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 792
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980116104c2ee01c0800000000000000
+      internalID: -4535438443250904951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_6
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 830
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22942d9ea168e40d0800000000000000
+      internalID: -3436662015486965470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 245
+        width: 900
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0899603a75f1d2ad0800000000000000
+      internalID: -2725487738231547520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_8
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 780
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6e8b48b0c871500800000000000000
+      internalID: 366915875753223877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_9
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 755
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a240f905974c0f0800000000000000
+      internalID: -1097619021999363462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_10
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 789
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af025bfd26991220800000000000000
+      internalID: 2457160195941470119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_11
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 358
+        width: 595
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d8cece5d4aecf720800000000000000
+      internalID: 2881435479634266327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_12
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 758
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7235559668a5dcb80800000000000000
+      internalID: -8372936598872567001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_13
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 733
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb10e04a1976b8f30800000000000000
+      internalID: 4578867321372541375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_14
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 351
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2bc53596c1f53d0800000000000000
+      internalID: -3215820370223516954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_15
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 338
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baee0d2214f1d9b70800000000000000
+      internalID: 8907310002626162347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_16
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 329
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece93ca28907adc80800000000000000
+      internalID: -8297195564621914418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_17
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 324
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b4ba37ea224ee80800000000000000
+      internalID: -8150351292973495519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_18
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 309
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f3512686b7b3070800000000000000
+      internalID: 8087193244126232357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_19
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 303
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0874ad839cf29cb50800000000000000
+      internalID: 6613870069059045248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_20
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 304
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7fffd334f9b21df0800000000000000
+      internalID: -210901774039515265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_21
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 281
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76dbea2dedc354f70800000000000000
+      internalID: 9170803143924956519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_22
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 265
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a929b9078d74bf0800000000000000
+      internalID: -340065268685170152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_23
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 264
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2482404ba01b20350800000000000000
+      internalID: 5981537914629400642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_24
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 249
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232ed4ed08564a9d0800000000000000
+      internalID: -2763972667138776526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_25
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 238
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c147c658d9b6ee0c0800000000000000
+      internalID: -4544576649677736932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_26
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 225
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a342d7404659390800000000000000
+      internalID: -7812228008162084296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_27
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 219
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d98ee8e859e965d0800000000000000
+      internalID: -3068665103001941546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_28
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 204
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f7c2e061e791960800000000000000
+      internalID: 7573222881592377172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_29
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 197
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13b997a0449fd320800000000000000
+      internalID: 2584947716544639772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_30
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 189
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a387eed9f6b5450800000000000000
+      internalID: 6078574846168021572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_31
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 188
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a4816a50fba8740800000000000000
+      internalID: 5155142754461305486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_32
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 177
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1eb178ccb8b4b540800000000000000
+      internalID: 5022842605381205534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_33
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 169
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b173ecf8bfa3880800000000000000
+      internalID: -8630309140843521245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_34
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 161
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08aac76209ce1ef50800000000000000
+      internalID: 6909063407228201600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_35
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 154
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c090dce07c73a20800000000000000
+      internalID: 3042118939695451266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_36
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 147
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3abcdd447ec3b3040800000000000000
+      internalID: 4628360006043814819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_37
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 128
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4805e1c7c9a4fb0800000000000000
+      internalID: -4662742407290256220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_38
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 112
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f28a8a0339ab500800000000000000
+      internalID: 412804153055129450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_39
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 124
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d0ea7a3b989f920800000000000000
+      internalID: 3024600029461351696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_40
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 103
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e7dca2b6af0b7d0800000000000000
+      internalID: -2904546421467414969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_41
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 99
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe1b8979512ad260800000000000000
+      internalID: 7123042428814827259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_42
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 89
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9f02b47f0863d40800000000000000
+      internalID: 5563776189268556262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_43
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 96
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a2b93ed2863bdc80800000000000000
+      internalID: -8296977952798035295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_44
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 86
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60febbd437ea34700800000000000000
+      internalID: 523453791953743622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_45
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 70
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dac2339e3ba75f880800000000000000
+      internalID: -8577815002127061843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_46
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 59
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995767e36bff438a0800000000000000
+      internalID: -6326150418351622759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_47
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 43
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc06f9a4ce172450800000000000000
+      internalID: 6063849253291560144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_48
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 38
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2842b001165030a00800000000000000
+      internalID: 721426279748543618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_49
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 6
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2768f92a33308e90800000000000000
+      internalID: -7025559093792708819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuto_dash0000_50
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 0
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90da1f321c4356b30800000000000000
+      internalID: 4279885025021897993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tuto_dash0000_0: 1028991768334459010
+      tuto_dash0000_1: -7943706109223881080
+      tuto_dash0000_10: 2457160195941470119
+      tuto_dash0000_11: 2881435479634266327
+      tuto_dash0000_12: -8372936598872567001
+      tuto_dash0000_13: 4578867321372541375
+      tuto_dash0000_14: -3215820370223516954
+      tuto_dash0000_15: 8907310002626162347
+      tuto_dash0000_16: -8297195564621914418
+      tuto_dash0000_17: -8150351292973495519
+      tuto_dash0000_18: 8087193244126232357
+      tuto_dash0000_19: 6613870069059045248
+      tuto_dash0000_2: -8086325987763996750
+      tuto_dash0000_20: -210901774039515265
+      tuto_dash0000_21: 9170803143924956519
+      tuto_dash0000_22: -340065268685170152
+      tuto_dash0000_23: 5981537914629400642
+      tuto_dash0000_24: -2763972667138776526
+      tuto_dash0000_25: -4544576649677736932
+      tuto_dash0000_26: -7812228008162084296
+      tuto_dash0000_27: -3068665103001941546
+      tuto_dash0000_28: 7573222881592377172
+      tuto_dash0000_29: 2584947716544639772
+      tuto_dash0000_3: -3905749685089852076
+      tuto_dash0000_30: 6078574846168021572
+      tuto_dash0000_31: 5155142754461305486
+      tuto_dash0000_32: 5022842605381205534
+      tuto_dash0000_33: -8630309140843521245
+      tuto_dash0000_34: 6909063407228201600
+      tuto_dash0000_35: 3042118939695451266
+      tuto_dash0000_36: 4628360006043814819
+      tuto_dash0000_37: -4662742407290256220
+      tuto_dash0000_38: 412804153055129450
+      tuto_dash0000_39: 3024600029461351696
+      tuto_dash0000_4: -8802761255802516107
+      tuto_dash0000_40: -2904546421467414969
+      tuto_dash0000_41: 7123042428814827259
+      tuto_dash0000_42: 5563776189268556262
+      tuto_dash0000_43: -8296977952798035295
+      tuto_dash0000_44: 523453791953743622
+      tuto_dash0000_45: -8577815002127061843
+      tuto_dash0000_46: -6326150418351622759
+      tuto_dash0000_47: 6063849253291560144
+      tuto_dash0000_48: 721426279748543618
+      tuto_dash0000_49: -7025559093792708819
+      tuto_dash0000_5: -4535438443250904951
+      tuto_dash0000_50: 4279885025021897993
+      tuto_dash0000_6: -3436662015486965470
+      tuto_dash0000_7: -2725487738231547520
+      tuto_dash0000_8: 366915875753223877
+      tuto_dash0000_9: -1097619021999363462
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
