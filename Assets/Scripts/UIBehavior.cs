@@ -5,7 +5,8 @@ public class UIBehavior : MonoBehaviour
 {
     public GameObject[] buttons;
     public GameObject selectedButton;
-    public Animator mainPanelAnimator;
+    public AudioSource optionsAudioSource;
+    public AudioClip optionsAudioClip;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,8 +20,6 @@ public class UIBehavior : MonoBehaviour
         Button buttonComponent = selectedButton.GetComponent<Button>();
         Image image = selectedButton.GetComponent<Image>();
         GameObject textAttached = selectedButton.transform.GetChild(0).gameObject;
-
-
 
         buttonComponent.interactable = true;
         image.enabled = true;
@@ -42,6 +41,11 @@ public class UIBehavior : MonoBehaviour
             }
         }
         
+    }
+    public void OnSelected(GameObject buttonSelected){
+        if (buttonSelected == EventSystem.current.currentSelectedGameObject){
+            optionsAudioSource.PlayOneShot(optionsAudioClip);
+        }
     }
    
 }
