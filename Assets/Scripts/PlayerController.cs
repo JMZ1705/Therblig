@@ -2,7 +2,7 @@
  *  PlayerController.cs
  * ----------------------------------------------------------------------------
  *  Controla al jugador 2D: movimiento, salto, dash, wall slide/jump, vida, UI,
- *  respawn, empujón (knockback) y ataque a enemigos.
+ *  respawn seguro, empujón (knockback), ataque normal y ataque en picada.
  * ========================================================================= */
 
 using UnityEngine;
@@ -93,11 +93,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask enemyLayers;
     [SerializeField] private float attackCooldown = 0.4f;
     private float nextAttackTime = 0f;
-    //--- Bandas ---
 
+    // --- Ataque en Picada ---
+    [Header("Configuración de Ataque en Picada")]
+    [SerializeField] private float diveForce = 8f;      // Fuerza hacia abajo al atacar en el aire
+    [SerializeField] private float diveDamage = 25f;     // Daño que hace el golpe en picada
+    private bool isDiving = false;                       // Controla si está cayendo en picada
+
+    // --- Bandas ---
     private float BandasForce = 0f;
-    //--- Checkpoint Animator --
+
+    // --- Checkpoint Animator ---
     [SerializeField] private Animator checkpointAnimator;
+
     // ========================================================================
     // START()
     // ========================================================================
@@ -116,7 +124,6 @@ public class PlayerController : MonoBehaviour
     // ========================================================================
     void FixedUpdate()
     {
-        
         if (isDashing) return;
         if (isWallJumping) return;
 
@@ -126,6 +133,10 @@ public class PlayerController : MonoBehaviour
         if (canJump)
         {
             wallJumpCant = 0;
+            if (isDiving)
+            {
+                isDiving = false; // Cancela la picada al tocar tierra
+            }
         }
 
         // 2. Lógica de deslizar por la pared (WallSlide)
@@ -183,8 +194,12 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.SetFloat("isHit", hitTime);
             }
         }
-        // Animacion Checkpoint
-        checkpointAnimator.SetBool("HasCheckpoint", checkPoint);
+
+        // Animación Checkpoint
+        if (checkpointAnimator != null)
+        {
+            checkpointAnimator.SetBool("HasCheckpoint", checkPoint);
+        }
 
         // 4. Orientación del Sprite
         if (!isFacingRight && direction < 0f)
@@ -211,19 +226,54 @@ public class PlayerController : MonoBehaviour
 
     private void PerformAttack()
     {
+        // Si el personaje NO está en el suelo, realiza el ataque en picada
+        if (!canJump)
+        {
+            PerformDiveAttack();
+            return;
+        }
+
+        // --- ATAQUE NORMAL (En el suelo) ---
         if (playerAnimator != null) playerAnimator.SetTrigger("Attack");
 
-        if (attackPoint == null) return;
+        ExecuteHitDetection(attackDamage);
+    }
 
+    private void PerformDiveAttack()
+    {
+        isDiving = true;
+
+        // Dispara el parámetro de picada en el Animator
+        if (playerAnimator != null) playerAnimator.SetTrigger("DiveAttack");
+
+        // Impulsa al jugador velozmente hacia abajo
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, -diveForce);
+
+        // Hace la prueba de impacto con el daño de picada
+        ExecuteHitDetection(diveDamage);
+    }
+
+    private void ExecuteHitDetection(float damageValue)
+    {
+        if (attackPoint == null) return;
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
+            // 1. Detectar si el objetivo es el Jefe Final
+            BossEnemy boss = enemy.GetComponent<BossEnemy>();
+            if (boss != null)
+            {
+                boss.TakeDamageFromPlayer(damageValue, transform.position);
+                continue;
+            }
+
+            // 2. Detectar si es un enemigo común
             EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage(attackDamage);
+                enemyHealth.TakeDamage(damageValue);
             }
         }
     }
@@ -281,7 +331,6 @@ public class PlayerController : MonoBehaviour
         direction = context.ReadValue<Vector2>().x;
     }
 
-
     public void Jump(InputAction.CallbackContext context)
     {
         if (isWallSliding)
@@ -329,7 +378,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // ========================================================================
-    // DAÑO Y RESPNAWN
+    // DAÑO Y RESPAWN
     // ========================================================================
     public void TakeDamage(float damage)
     {
@@ -378,7 +427,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            StartCoroutine(RespawnPlayer());
+            // Verificación previa para evitar la excepción de corrutina en objetos inactivos
+            if (gameObject.activeInHierarchy)
+            {
+                StartCoroutine(RespawnPlayer());
+            }
         }
     }
 
@@ -398,7 +451,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // ========================================================================
-    // TRIGGERS
+    // TRIGGERS Y COLISIONES
     // ========================================================================
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -409,7 +462,6 @@ public class PlayerController : MonoBehaviour
             {
                 spawn.transform.position = player.transform.position;
             }
-            
         }
         if (collision.gameObject.CompareTag("Ending"))
         {
@@ -417,7 +469,6 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Kill-Planes"))
         {
-            TakeDamage(50);
             KillPlayer();
         }
     }
@@ -426,7 +477,6 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("confiner"))
         {
-            TakeDamage(50);
             KillPlayer();
         }
     }
@@ -447,8 +497,9 @@ public class PlayerController : MonoBehaviour
         Debug.Log($"<color=cyan>¡Nuevo daño de ataque del personaje: {attackDamage}!</color>");
     }
 
-    // Para las bandas
-
+    // ========================================================================
+    // BANDAS TRANSPORTADORAS
+    // ========================================================================
     public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("bandaIzq"))
@@ -460,9 +511,10 @@ public class PlayerController : MonoBehaviour
             BandasForce = 5f;
         }
     }
+
     public void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("bandaIzq") || canJump==false)
+        if (collision.gameObject.CompareTag("bandaIzq") || canJump == false)
         {
             BandasForce = 0f;
         }

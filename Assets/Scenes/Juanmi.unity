@@ -700,6 +700,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   attackCooldown: 0.4
+  diveForce: 8
+  diveDamage: 25
+  checkpointAnimator: {fileID: 0}
 --- !u!70 &98190040
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
