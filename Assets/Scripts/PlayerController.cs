@@ -453,10 +453,14 @@ public class PlayerController : MonoBehaviour
         {
             BandasForce = -5f;
         }
+        if (collision.gameObject.CompareTag("bandaDer"))
+        {
+            BandasForce = 5f;
+        }
     }
     public void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("bandaIzq"))
+        if (collision.gameObject.CompareTag("bandaIzq") || canJump==false)
         {
             BandasForce = 0f;
         }
