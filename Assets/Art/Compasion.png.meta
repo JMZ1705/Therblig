@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 78ca3ae354bb4e74e86e95a09bdaff2f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2251185585754910865
+    second: Compasion_0
+  - first:
+      213: -4229857754025309504
+    second: Compasion_1
+  - first:
+      213: 2722163085181712912
+    second: Compasion_2
+  - first:
+      213: -3580675740665675299
+    second: Compasion_3
+  - first:
+      213: 1615534719748924747
+    second: Compasion_4
+  - first:
+      213: -2195365334183997248
+    second: Compasion_5
+  - first:
+      213: -6988967878495009693
+    second: Compasion_6
+  - first:
+      213: -5029643725423160653
+    second: Compasion_7
+  - first:
+      213: -8586581848316453517
+    second: Compasion_8
+  - first:
+      213: 6127657530713601989
+    second: Compasion_9
+  - first:
+      213: -5413041344501017992
+    second: Compasion_10
+  - first:
+      213: -8965883201369426415
+    second: Compasion_11
+  - first:
+      213: 7616076919176177152
+    second: Compasion_12
+  - first:
+      213: 6024049761742231540
+    second: Compasion_13
+  - first:
+      213: 1230569514030212151
+    second: Compasion_14
+  - first:
+      213: -6578614622858353584
+    second: Compasion_15
+  - first:
+      213: 542635120968144721
+    second: Compasion_16
+  - first:
+      213: 6883095997793391901
+    second: Compasion_17
+  - first:
+      213: -1837364685890901503
+    second: Compasion_18
+  - first:
+      213: 4741546719051594133
+    second: Compasion_19
+  - first:
+      213: 1909798543108466783
+    second: Compasion_20
+  - first:
+      213: 3252876887616840827
+    second: Compasion_21
+  - first:
+      213: -5671384379096931477
+    second: Compasion_22
+  - first:
+      213: 1125599056744582110
+    second: Compasion_23
+  - first:
+      213: 6106824861379112747
+    second: Compasion_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Compasion_0
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 797
+        width: 122
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f499513ae22c0e0800000000000000
+      internalID: -2251185585754910865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_1
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 886
+        width: 164
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cac3e098c68c45c0800000000000000
+      internalID: -4229857754025309504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_2
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 984
+        width: 16
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01affe047e017c520800000000000000
+      internalID: 2722163085181712912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_3
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 689
+        width: 936
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd183c59262ee4ec0800000000000000
+      internalID: -3580675740665675299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_4
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 971
+        width: 199
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45e1f4a4488b6610800000000000000
+      internalID: 1615534719748924747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_5
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 901
+        width: 194
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c091cf2cde7881e0800000000000000
+      internalID: -2195365334183997248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 690
+        width: 322
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36480bf5eb2320f90800000000000000
+      internalID: -6988967878495009693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_7
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 481
+        width: 501
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b2516f0ead133ab0800000000000000
+      internalID: -5029643725423160653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_8
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 914
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37dd7487d4556d880800000000000000
+      internalID: -8586581848316453517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_9
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 787
+        width: 332
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c77e67fe00d90550800000000000000
+      internalID: 6127657530713601989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 583
+        width: 60
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8729382a39301e4b0800000000000000
+      internalID: -5413041344501017992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 719
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116bbbc4bb8c29380800000000000000
+      internalID: -8965883201369426415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_12
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 741
+        width: 243
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0062c853b9db1b960800000000000000
+      internalID: 7616076919176177152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_13
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 650
+        width: 20
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f71ced6759b99350800000000000000
+      internalID: 6024049761742231540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_14
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 725
+        width: 247
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7342233047cd31110800000000000000
+      internalID: 1230569514030212151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_15
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 437
+        width: 691
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05466520bd014b4a0800000000000000
+      internalID: -6578614622858353584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_16
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 128
+        width: 289
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15715fb74c3d78700800000000000000
+      internalID: 542635120968144721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_17
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 63
+        width: 437
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d15536f775ba58f50800000000000000
+      internalID: 6883095997793391901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_18
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 136
+        width: 613
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10a20ae8d8e5086e0800000000000000
+      internalID: -1837364685890901503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_19
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 361
+        width: 129
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5993df28e9b5dc140800000000000000
+      internalID: 4741546719051594133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_20
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 75
+        width: 386
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f58e98a08a7f08a10800000000000000
+      internalID: 1909798543108466783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 369
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74ea787b4a842d20800000000000000
+      internalID: 3252876887616840827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_22
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 36
+        width: 168
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b636a3b94f13b41b0800000000000000
+      internalID: -5671384379096931477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_23
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 0
+        width: 278
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb86c0e06eee9f00800000000000000
+      internalID: 1125599056744582110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Compasion_24
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 6
+        width: 357
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2fa6082bdccfb450800000000000000
+      internalID: 6106824861379112747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Compasion_0: -2251185585754910865
+      Compasion_1: -4229857754025309504
+      Compasion_10: -5413041344501017992
+      Compasion_11: -8965883201369426415
+      Compasion_12: 7616076919176177152
+      Compasion_13: 6024049761742231540
+      Compasion_14: 1230569514030212151
+      Compasion_15: -6578614622858353584
+      Compasion_16: 542635120968144721
+      Compasion_17: 6883095997793391901
+      Compasion_18: -1837364685890901503
+      Compasion_19: 4741546719051594133
+      Compasion_2: 2722163085181712912
+      Compasion_20: 1909798543108466783
+      Compasion_21: 3252876887616840827
+      Compasion_22: -5671384379096931477
+      Compasion_23: 1125599056744582110
+      Compasion_24: 6106824861379112747
+      Compasion_3: -3580675740665675299
+      Compasion_4: 1615534719748924747
+      Compasion_5: -2195365334183997248
+      Compasion_6: -6988967878495009693
+      Compasion_7: -5029643725423160653
+      Compasion_8: -8586581848316453517
+      Compasion_9: 6127657530713601989
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
