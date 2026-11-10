@@ -100,6 +100,7 @@ public class UIPauseBehavior : MonoBehaviour
     public void DeathPanel()
     {
         afterDeathPanel.SetActive(true);
+        stageFailButton.Select();
     }
     public void FinishPanel()
     {

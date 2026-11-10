@@ -492,7 +492,6 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Ending"))
         {
-            
             panelesMuerteYFinal.FinishPanel();
         }
         if (collision.gameObject.CompareTag("Kill-Planes"))
