@@ -461,7 +461,7 @@ public class PlayerController : MonoBehaviour
     private void UpdateUI()
     {
         if (healthText != null) healthText.text = $"Health: {health}/{maxHealth}";
-        if (vidasText != null) vidasText.text = $"Vidas: {vidas}";
+        if (vidasText != null) vidasText.text = $"Chances: {vidas}";
     }
 
     private void KillPlayer()

@@ -169009,7 +169009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
-  m_FirstSelected: {fileID: 1782842705423811844}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &2111099375
@@ -169080,11 +169080,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &1782842705423811844 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2631072239505212647, guid: 63f99db71a33aa2489fd49675088eb62, type: 3}
-  m_PrefabInstance: {fileID: 3155031487110393297}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2649485625461241498
 GameObject:
   m_ObjectHideFlags: 0
