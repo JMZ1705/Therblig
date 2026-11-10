@@ -29,6 +29,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/N6 Final.unity
     guid: 1a6b3b9c07a70dd4e9ba6863515d8ef4
+  - enabled: 1
+    path: Assets/Scenes/Cinematica_Intro.unity
+    guid: 53f464b7451c8844e985dce9eb5a3091
+  - enabled: 1
+    path: Assets/Scenes/Libertad.unity
+    guid: 87fe3c25865fef7498b618c332611f91
+  - enabled: 1
+    path: "Assets/Scenes/Compasi\xF3n.unity"
+    guid: c7c20e8f72d405849b0f3c3e40451951
+  - enabled: 1
+    path: Assets/Scenes/Venganza.unity
+    guid: 69bb3ba05163d1444af3a7ddc341a1c2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

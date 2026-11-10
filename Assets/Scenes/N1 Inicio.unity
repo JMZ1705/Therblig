@@ -169206,10 +169206,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadTitleScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 4791981876527269192, guid: 63f99db71a33aa2489fd49675088eb62, type: 3}
+      propertyPath: camAnimator
+      value: 
+      objectReference: {fileID: 2080672659}
     - target: {fileID: 5633948844205204388, guid: 63f99db71a33aa2489fd49675088eb62, type: 3}
       propertyPath: camAnimator
       value: 
       objectReference: {fileID: 2080672659}
+    - target: {fileID: 8336286137849543516, guid: 63f99db71a33aa2489fd49675088eb62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1016664302}
+    - target: {fileID: 8336286137849543516, guid: 63f99db71a33aa2489fd49675088eb62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadTitleScreen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

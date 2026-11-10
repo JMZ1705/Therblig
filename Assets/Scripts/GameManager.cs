@@ -48,6 +48,22 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(LoadScene(7));
     }
+    public void Cinematica()
+    {
+        StartCoroutine(LoadScene(8));
+    }
+    public void FinalLibertad()
+    {
+        StartCoroutine(LoadScene(9));
+    }
+    public void FinalCompasion()
+    {
+        StartCoroutine(LoadScene(10));
+    }
+    public void FinalVenganza()
+    {
+        StartCoroutine(LoadScene(11));
+    }
     IEnumerator LoadScene(int sceneIndex){
         transitionAnimator.SetTrigger("End");
         yield return new WaitForSeconds(transitionTime);
