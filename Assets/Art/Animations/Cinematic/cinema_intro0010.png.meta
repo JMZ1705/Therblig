@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 4797cc1365e4e354dbf8036e9790a8c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1879161280806400432
+    second: cinema_intro0010_0
+  - first:
+      213: -7365716413108923198
+    second: cinema_intro0010_1
+  - first:
+      213: 5658292290147730634
+    second: cinema_intro0010_2
+  - first:
+      213: -8337208261549276000
+    second: cinema_intro0010_3
+  - first:
+      213: 913885238610846529
+    second: cinema_intro0010_4
+  - first:
+      213: 6457194411488212734
+    second: cinema_intro0010_5
+  - first:
+      213: -8812016560693124943
+    second: cinema_intro0010_6
+  - first:
+      213: -7345518623409405320
+    second: cinema_intro0010_7
+  - first:
+      213: -8186834522973062829
+    second: cinema_intro0010_8
+  - first:
+      213: 1627024869683182867
+    second: cinema_intro0010_9
+  - first:
+      213: -2449025051360420417
+    second: cinema_intro0010_10
+  - first:
+      213: -1764999776994271069
+    second: cinema_intro0010_11
+  - first:
+      213: 6551975065079859897
+    second: cinema_intro0010_12
+  - first:
+      213: 5473064930298581875
+    second: cinema_intro0010_13
+  - first:
+      213: 2237684240974628273
+    second: cinema_intro0010_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cinema_intro0010_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 456
+        width: 625
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05ecdd575c0ebe5e0800000000000000
+      internalID: -1879161280806400432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_1
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 936
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c4d06092f7b7c990800000000000000
+      internalID: -7365716413108923198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_2
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 931
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac44695ebda468e40800000000000000
+      internalID: 5658292290147730634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_3
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 931
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a447ef22494c4c80800000000000000
+      internalID: -8337208261549276000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_4
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 931
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1436fd458c5ceac00800000000000000
+      internalID: 913885238610846529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_5
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 931
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef674660b109c9950800000000000000
+      internalID: 6457194411488212734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_6
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 935
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0e60940ad65b580800000000000000
+      internalID: -8812016560693124943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_7
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 931
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8728aa0fab97f0a90800000000000000
+      internalID: -7345518623409405320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_8
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 425
+        width: 683
+        height: 524
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35939478065826e80800000000000000
+      internalID: -8186834522973062829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_9
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 70
+        width: 1344
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d3136af7a549610800000000000000
+      internalID: 1627024869683182867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_10
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 265
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd11a7f0b0530ed0800000000000000
+      internalID: -2449025051360420417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_11
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 181
+        width: 59
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0ec9fdd067187e0800000000000000
+      internalID: -1764999776994271069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_12
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 61
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ba4d4b9b9a4dea50800000000000000
+      internalID: 6551975065079859897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_13
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 67
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373581b7e8b34fb40800000000000000
+      internalID: 5473064930298581875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cinema_intro0010_14
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 55
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b548ce16f9dd0f10800000000000000
+      internalID: 2237684240974628273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cinema_intro0010_0: -1879161280806400432
+      cinema_intro0010_1: -7365716413108923198
+      cinema_intro0010_10: -2449025051360420417
+      cinema_intro0010_11: -1764999776994271069
+      cinema_intro0010_12: 6551975065079859897
+      cinema_intro0010_13: 5473064930298581875
+      cinema_intro0010_14: 2237684240974628273
+      cinema_intro0010_2: 5658292290147730634
+      cinema_intro0010_3: -8337208261549276000
+      cinema_intro0010_4: 913885238610846529
+      cinema_intro0010_5: 6457194411488212734
+      cinema_intro0010_6: -8812016560693124943
+      cinema_intro0010_7: -7345518623409405320
+      cinema_intro0010_8: -8186834522973062829
+      cinema_intro0010_9: 1627024869683182867
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
