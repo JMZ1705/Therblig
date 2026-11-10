@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c953180e1c2d02d4a82ab607b30cffa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StaticShooterEnemy
-  projectilePrefab: {fileID: 5154110539488752781, guid: 2cc06628bb1eee0418afea846aa9d1d0, type: 3}
+  projectilePrefab: {fileID: 8636423922786119106, guid: 2cc06628bb1eee0418afea846aa9d1d0, type: 3}
   firePoint: {fileID: 665444495}
   fireInterval: 2
   playerTransform: {fileID: 98190044}
@@ -2119,7 +2119,7 @@ MonoBehaviour:
   pointA: {fileID: 1560937663}
   pointB: {fileID: 1793909863}
   speed: 2.5
-  projectilePrefab: {fileID: 5154110539488752781, guid: 2cc06628bb1eee0418afea846aa9d1d0, type: 3}
+  projectilePrefab: {fileID: 8636423922786119106, guid: 2cc06628bb1eee0418afea846aa9d1d0, type: 3}
   firePoint: {fileID: 2120819550}
   fireInterval: 2
   playerTransform: {fileID: 98190044}
