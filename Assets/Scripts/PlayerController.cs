@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public GameObject spawn;
     public GameManager gm;
     public UIPauseBehavior panelesMuerteYFinal;
+    [SerializeField] private GameObject finalBoss;
+    [SerializeField] private GameObject door;
 
     // --- Movimiento horizontal ---
     public float direction;
@@ -97,6 +99,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask enemyLayers;
     [SerializeField] private float attackCooldown = 0.4f;
     private float nextAttackTime = 0f;
+    //private bool isAttacking = false;//Bool usado para checkear si esta atacando y poder animarlo en el aire, PS: No era eso, solo un problema de la llamada en el codigo
 
     // --- Ataque en Picada / Pesado ---
     [Header("Configuración de Ataque en Picada")]
@@ -124,6 +127,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip soundHeavyAttack;
     [SerializeField] private AudioClip soundHurt;
     [SerializeField] private AudioClip soundDie;
+    
 
     private bool useStep1 = true;
 
@@ -214,6 +218,7 @@ public class PlayerController : MonoBehaviour
         {
             checkpointAnimator.SetBool("HasCheckpoint", checkPoint);
         }
+        
 
         // 4. Orientación del Sprite
         if (hitTime <= 0)
@@ -227,6 +232,7 @@ public class PlayerController : MonoBehaviour
                 Flip();
             }
         }
+        
     }
 
     // ========================================================================
@@ -246,6 +252,11 @@ public class PlayerController : MonoBehaviour
         if (!canJump)
         {
             PerformDiveAttack();
+            if (playerAnimator != null) playerAnimator.SetTrigger("Attack");
+            if (!finalBoss.activeSelf)
+            {
+                door.SetActive(true);
+            }
             return;
         }
 
