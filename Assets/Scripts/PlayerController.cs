@@ -2,7 +2,7 @@
  *  PlayerController.cs
  * ----------------------------------------------------------------------------
  *  Controla al jugador 2D: movimiento, salto, dash, wall slide/jump, vida, UI,
- *  respawn seguro, empujón (knockback) con REBOTE LARGO, ataque normal y picada.
+ *  respawn seguro, empujón (knockback), ataques, sonidos y VOLUMEN AJUSTABLE.
  * ========================================================================= */
 
 using UnityEngine;
@@ -75,9 +75,9 @@ public class PlayerController : MonoBehaviour
 
     // --- Golpe / knockback LEJANO ---
     [Header("Configuración de Knockback (Rebote Lejano)")]
-    public float hitForce = 18f;             // Fuerza horizontal (Subida de 12 a 18 para lanzarlo lejos)
-    public float hitUpForce = 12f;           // Fuerza vertical (Subida de 7 a 12 para elevarlo bien)
-    public float hitDuration = 0.45f;         // Tiempo de vuelo sin control del jugador
+    public float hitForce = 18f;
+    public float hitUpForce = 12f;
+    public float hitDuration = 0.45f;
     public float hitTime;
     public bool hitFromRight;
 
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float attackCooldown = 0.4f;
     private float nextAttackTime = 0f;
 
-    // --- Ataque en Picada ---
+    // --- Ataque en Picada / Pesado ---
     [Header("Configuración de Ataque en Picada")]
     [SerializeField] private float diveForce = 8f;
     [SerializeField] private float diveDamage = 25f;
@@ -110,6 +110,23 @@ public class PlayerController : MonoBehaviour
     // --- Checkpoint Animator ---
     [SerializeField] private Animator checkpointAnimator;
 
+    // --- AUDIO / EFECTOS DE SONIDO Y VOLUMEN ---
+    [Header("Configuración de Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [Range(0f, 1f)][SerializeField] private float sfxVolume = 0.5f; // Volumen global del jugador
+
+    [SerializeField] private AudioClip soundRunStep1;
+    [SerializeField] private AudioClip soundRunStep2;
+    [SerializeField] private AudioClip soundJump;
+    [SerializeField] private AudioClip soundWallJump;
+    [SerializeField] private AudioClip soundDash;
+    [SerializeField] private AudioClip soundLightAttack;
+    [SerializeField] private AudioClip soundHeavyAttack;
+    [SerializeField] private AudioClip soundHurt;
+    [SerializeField] private AudioClip soundDie;
+
+    private bool useStep1 = true;
+
     // ========================================================================
     // START()
     // ========================================================================
@@ -119,10 +136,10 @@ public class PlayerController : MonoBehaviour
         gm = FindFirstObjectByType<GameManager>();
 
         if (rb == null) rb = GetComponent<Rigidbody2D>();
+        if (audioSource == null) audioSource = GetComponent<AudioSource>();
 
         vidas = iVidas;
         UpdateUI();
-
     }
 
     // ========================================================================
@@ -185,7 +202,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // Mientras dura el rebote, descontamos el temporizador sin intervenir la física del vuelo
             hitTime -= Time.deltaTime;
             if (playerAnimator != null)
             {
@@ -285,6 +301,8 @@ public class PlayerController : MonoBehaviour
         canDash = false;
         isDashing = true;
 
+        EventPlayDashSound();
+
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
 
@@ -344,6 +362,8 @@ public class PlayerController : MonoBehaviour
             wallJumpingCounter = 0f;
             isWallSliding = false;
 
+            EventPlayWallJumpSound();
+
             if ((wallJumpingDirection > 0f && !isFacingRight) || (wallJumpingDirection < 0f && isFacingRight))
             {
                 Flip();
@@ -370,7 +390,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // ========================================================================
-    // DAÑO, EMPUJÓN Y REBOTE PARABÓLICO LEJOS
+    // DAÑO Y KNOCKBACK
     // ========================================================================
     public void ApplyKnockbackAndDamage(float damage, bool fromRight)
     {
@@ -390,12 +410,8 @@ public class PlayerController : MonoBehaviour
 
         if (rb != null)
         {
-            // Reset de velocidades previas
             rb.linearVelocity = Vector2.zero;
-
             float knockDir = hitFromRight ? -1f : 1f;
-
-            // Asigna un vector directo de alta velocidad horizontal y vertical (Volando lejos)
             rb.linearVelocity = new Vector2(knockDir * hitForce, hitUpForce);
         }
 
@@ -406,6 +422,8 @@ public class PlayerController : MonoBehaviour
     {
         health -= damage;
         if (health < 0) health = 0;
+
+        EventPlayHurtSound();
 
         UpdateUI();
 
@@ -437,6 +455,8 @@ public class PlayerController : MonoBehaviour
 
     private void KillPlayer()
     {
+        EventPlayDieSound();
+
         SpriteRenderer playerSpriteRenderer = player != null ? player.GetComponent<SpriteRenderer>() : GetComponent<SpriteRenderer>();
         if (playerSpriteRenderer != null) playerSpriteRenderer.enabled = false;
 
@@ -517,18 +537,12 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-    // ========================================================================
-    // MEJORA DE DAÑO (HAMMER / PICKUPS)
-    // ========================================================================
     public void UpgradeDamage(float extraDamage)
     {
         attackDamage += extraDamage;
         Debug.Log($"<color=cyan>¡Nuevo daño de ataque del personaje: {attackDamage}!</color>");
     }
 
-    // ========================================================================
-    // BANDAS TRANSPORTADORAS
-    // ========================================================================
     public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("bandaIzq"))
@@ -548,4 +562,41 @@ public class PlayerController : MonoBehaviour
             BandasForce = 0f;
         }
     }
+
+    // ========================================================================
+    // MÉTODOS DE AUDIO Y REPRODUCCIÓN CON VOLUMEN
+    // ========================================================================
+
+    private void PlaySFX(AudioClip clip, float customVolumeMultiplier = 1.0f)
+    {
+        if (audioSource != null && clip != null)
+        {
+            float finalVolume = Mathf.Clamp01(sfxVolume * customVolumeMultiplier);
+            audioSource.PlayOneShot(clip, finalVolume);
+        }
+    }
+
+    public void EventPlayRunSound()
+    {
+        if (useStep1)
+        {
+            PlaySFX(soundRunStep1, 0.7f);
+        }
+        else
+        {
+            PlaySFX(soundRunStep2, 0.7f);
+        }
+        useStep1 = !useStep1;
+    }
+
+    public void EventPlayJumpSound() => PlaySFX(soundJump);
+    public void EventPlayLightAttackSound() => PlaySFX(soundLightAttack);
+    public void EventPlayHeavyAttackSound() => PlaySFX(soundHeavyAttack);
+
+    // --- AQUÍ SE CONTROLA EL VOLUMEN DEL WALL JUMP (0.3f = 30% de intensidad) ---
+    public void EventPlayWallJumpSound() => PlaySFX(soundWallJump, 0.25f);
+
+    public void EventPlayDashSound() => PlaySFX(soundDash);
+    public void EventPlayHurtSound() => PlaySFX(soundHurt);
+    public void EventPlayDieSound() => PlaySFX(soundDie);
 }
