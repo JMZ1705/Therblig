@@ -1735,6 +1735,8 @@ MonoBehaviour:
   spawn: {fileID: 0}
   gm: {fileID: 0}
   panelesMuerteYFinal: {fileID: 0}
+  finalBoss: {fileID: 0}
+  door: {fileID: 0}
   direction: 0
   speed: 6
   rb: {fileID: 1763617031}
@@ -1776,7 +1778,9 @@ MonoBehaviour:
   diveDamage: 25
   checkpointAnimator: {fileID: 0}
   audioSource: {fileID: 1763617034}
-  soundRun: {fileID: 8300000, guid: 3229cf950b3fa9646a47fc6dfb29d88b, type: 3}
+  sfxVolume: 0.5
+  soundRunStep1: {fileID: 8300000, guid: 4d43893f2119a644797fef97e5a25ea2, type: 3}
+  soundRunStep2: {fileID: 8300000, guid: 9f3beb57499eaf747a3e7142af770d59, type: 3}
   soundJump: {fileID: 8300000, guid: b6ccce164783aa845866cb5900532c89, type: 3}
   soundWallJump: {fileID: 8300000, guid: 3d84b3826dd58c641837609974445726, type: 3}
   soundDash: {fileID: 8300000, guid: e34bc03a091786046b6cf7ba0b3a84bd, type: 3}
