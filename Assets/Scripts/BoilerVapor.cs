@@ -1,3 +1,11 @@
+/* ============================================================================
+ *  BoilerVapor.cs
+ * ----------------------------------------------------------------------------
+ *  Controla el ciclo del vapor: activa/desactiva el sprite, collider y sonido
+ *  exclusivamente cuando sale el vapor, e inflige daño continuo al jugador,
+ *  con control de volumen aumentado.
+ * ========================================================================= */
+
 using System.Collections;
 using UnityEngine;
 
@@ -17,6 +25,11 @@ public class BoilerVapor : MonoBehaviour
     [SerializeField] private SpriteRenderer vaporSprite;
     [SerializeField] private Collider2D vaporDamageCollider;
 
+    [Header("Configuración de Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip soundVaporRelease;  // Sonido del disparo de vapor
+    [SerializeField] private float vaporVolume = 1.0f;      // Volumen del vapor (Puedes subirlo a 1.5, 2.0, etc.)
+
     private bool isVaporActive = false;
     private Coroutine damageCoroutine;
 
@@ -26,6 +39,7 @@ public class BoilerVapor : MonoBehaviour
         if (vaporAnimator == null) vaporAnimator = GetComponent<Animator>();
         if (vaporSprite == null) vaporSprite = GetComponent<SpriteRenderer>();
         if (vaporDamageCollider == null) vaporDamageCollider = GetComponent<Collider2D>();
+        if (audioSource == null) audioSource = GetComponent<AudioSource>();
 
         // Estado inicial: apagado
         if (vaporDamageCollider != null) vaporDamageCollider.enabled = false;
@@ -43,7 +57,7 @@ public class BoilerVapor : MonoBehaviour
 
         while (true)
         {
-            // --- FASE 1: ACTIVAR VAPOR ---
+            // --- FASE 1: ACTIVAR VAPOR Y REPRODUCIR SONIDO ---
             isVaporActive = true;
 
             if (vaporSprite != null) vaporSprite.enabled = true;
@@ -53,6 +67,9 @@ public class BoilerVapor : MonoBehaviour
             {
                 vaporAnimator.SetBool("isVaporActive", true);
             }
+
+            // El sonido se dispara JUSTO AQUÍ, cuando el vapor sale
+            PlayVaporSound();
 
             yield return new WaitForSeconds(activeDuration);
 
@@ -68,6 +85,15 @@ public class BoilerVapor : MonoBehaviour
             }
 
             yield return new WaitForSeconds(inactiveDuration);
+        }
+    }
+
+    private void PlayVaporSound()
+    {
+        if (audioSource != null && soundVaporRelease != null)
+        {
+            // Se envía el valor directo de vaporVolume a PlayOneShot
+            audioSource.PlayOneShot(soundVaporRelease, vaporVolume);
         }
     }
 
