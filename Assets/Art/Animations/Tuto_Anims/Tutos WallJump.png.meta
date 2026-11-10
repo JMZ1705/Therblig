@@ -1,0 +1,1677 @@
+fileFormatVersion: 2
+guid: f7838337647e87e48bffa96c642a870e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7668287377673245618
+    second: Tutos Salto_0
+  - first:
+      213: 7719903650357477179
+    second: Tutos Salto_1
+  - first:
+      213: -4720513938854830797
+    second: Tutos Salto_2
+  - first:
+      213: -4950899158769198930
+    second: Tutos Salto_3
+  - first:
+      213: 1329223255788331643
+    second: Tutos Salto_4
+  - first:
+      213: -7868325561634809182
+    second: Tutos Salto_5
+  - first:
+      213: 8702764601578284545
+    second: Tutos Salto_6
+  - first:
+      213: 6868057779514440710
+    second: Tutos Salto_7
+  - first:
+      213: -2006841349773531136
+    second: Tutos Salto_8
+  - first:
+      213: 1378634371309932233
+    second: Tutos Salto_9
+  - first:
+      213: 8120091515432263340
+    second: Tutos Salto_10
+  - first:
+      213: 293701291829225512
+    second: Tutos Salto_11
+  - first:
+      213: -7309550144469696357
+    second: Tutos Salto_12
+  - first:
+      213: -4948225520414855194
+    second: Tutos Salto_13
+  - first:
+      213: -4026017487767841173
+    second: Tutos Salto_14
+  - first:
+      213: 5156964238908509961
+    second: Tutos Salto_15
+  - first:
+      213: 4713898831216616081
+    second: Tutos Salto_16
+  - first:
+      213: 5307544348180445644
+    second: Tutos Salto_17
+  - first:
+      213: 2857505596964077043
+    second: Tutos Salto_18
+  - first:
+      213: 4727669830035233359
+    second: Tutos Salto_19
+  - first:
+      213: 602545261079643602
+    second: Tutos Salto_20
+  - first:
+      213: 7850637152446824572
+    second: Tutos Salto_21
+  - first:
+      213: 53939540079423749
+    second: Tutos Salto_22
+  - first:
+      213: -1704797169024140127
+    second: Tutos Salto_23
+  - first:
+      213: -3933547386417030476
+    second: Tutos Salto_24
+  - first:
+      213: -3576122478998879533
+    second: Tutos Salto_25
+  - first:
+      213: -6153892587484593597
+    second: Tutos Salto_26
+  - first:
+      213: 6408281422273513386
+    second: Tutos Salto_27
+  - first:
+      213: 8842662248613686843
+    second: Tutos Salto_28
+  - first:
+      213: 8797660901434682882
+    second: Tutos Salto_29
+  - first:
+      213: 7478187652997828463
+    second: Tutos Salto_30
+  - first:
+      213: -3008346746059537011
+    second: Tutos Salto_31
+  - first:
+      213: 4246853360962977361
+    second: Tutos Salto_32
+  - first:
+      213: -6898028928316306715
+    second: Tutos Salto_33
+  - first:
+      213: 3231353601808591183
+    second: Tutos Salto_34
+  - first:
+      213: -7892205992192747347
+    second: Tutos Salto_35
+  - first:
+      213: -1912021400949870396
+    second: Tutos Salto_36
+  - first:
+      213: 2356984675514430357
+    second: Tutos Salto_37
+  - first:
+      213: 8520439061904241099
+    second: Tutos Salto_38
+  - first:
+      213: -2887498154761988178
+    second: Tutos Salto_39
+  - first:
+      213: -7221263070328480476
+    second: Tutos Salto_40
+  - first:
+      213: -5137457648041336918
+    second: Tutos Salto_41
+  - first:
+      213: -2403041916062362681
+    second: Tutos Salto_42
+  - first:
+      213: 8299157813066064442
+    second: Tutos Salto_43
+  - first:
+      213: -8851516727698047041
+    second: Tutos Salto_44
+  - first:
+      213: -7453345452695626776
+    second: Tutos Salto_45
+  - first:
+      213: 4894063281453592186
+    second: Tutos Salto_46
+  - first:
+      213: 3900385731965795771
+    second: Tutos Salto_47
+  - first:
+      213: 9066703410024229246
+    second: Tutos Salto_48
+  - first:
+      213: 243075154397573812
+    second: Tutos Salto_49
+  - first:
+      213: 6235064423343145975
+    second: Tutos Salto_50
+  - first:
+      213: -4208521984846879439
+    second: Tutos Salto_51
+  - first:
+      213: -5192970335664578952
+    second: Tutos Salto_52
+  - first:
+      213: -1476676779135086292
+    second: Tutos Salto_53
+  - first:
+      213: -2573038152457470249
+    second: Tutos Salto_54
+  - first:
+      213: 6057872460731449325
+    second: Tutos Salto_55
+  - first:
+      213: 6728292513591028705
+    second: Tutos Salto_56
+  - first:
+      213: 7722290053009592440
+    second: Tutos Salto_57
+  - first:
+      213: 6871121010198195123
+    second: Tutos Salto_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tutos Salto_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 260
+        width: 587
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b353ddddba3b6a60800000000000000
+      internalID: 7668287377673245618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_1
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 38
+        width: 263
+        height: 1021
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f7ccbd77b922b60800000000000000
+      internalID: 7719903650357477179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_2
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 779
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d174d359d5d7eb0800000000000000
+      internalID: -4720513938854830797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_3
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 767
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea818c2327fda4bb0800000000000000
+      internalID: -4950899158769198930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_4
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 754
+        width: 67
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72a3743289527210800000000000000
+      internalID: 1329223255788331643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_5
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 779
+        width: 41
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa91a107971ec290800000000000000
+      internalID: -7868325561634809182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_6
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 785
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106eae0cb4e66c870800000000000000
+      internalID: 8702764601578284545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_7
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 797
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60cf0d4792e305f50800000000000000
+      internalID: 6868057779514440710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_8
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 761
+        width: 157
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008ee22dc644624e0800000000000000
+      internalID: -2006841349773531136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_9
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 852
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce821908a4e12310800000000000000
+      internalID: 1378634371309932233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_10
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 873
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caed001163c50b070800000000000000
+      internalID: 8120091515432263340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_11
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 897
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828ed81d4cf631400800000000000000
+      internalID: 293701291829225512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_12
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 930
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b908afa0fd24f8a90800000000000000
+      internalID: -7309550144469696357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_13
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 924
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef66232b1f545bb0800000000000000
+      internalID: -4948225520414855194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_14
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 357
+        width: 338
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b665616fc66b028c0800000000000000
+      internalID: -4026017487767841173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_15
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 749
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90fc88b07a7319740800000000000000
+      internalID: 5156964238908509961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_16
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 742
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 192abcdf2022b6140800000000000000
+      internalID: 4713898831216616081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_17
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 751
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc97deec67f28a940800000000000000
+      internalID: 5307544348180445644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_18
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 518
+        width: 119
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fdfbb26336e7a720800000000000000
+      internalID: 2857505596964077043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_19
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 433
+        width: 111
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ad49289ae0c9140800000000000000
+      internalID: 4727669830035233359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_20
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 445
+        width: 92
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d54fb7f8bbac5800800000000000000
+      internalID: 602545261079643602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_21
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 444
+        width: 154
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70c31c45e013fc60800000000000000
+      internalID: 7850637152446824572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_22
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 345
+        width: 90
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50138c5d9b1afb000800000000000000
+      internalID: 53939540079423749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_23
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 350
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac7936d1085758e0800000000000000
+      internalID: -1704797169024140127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_24
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 337
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba527d2e7b3969c0800000000000000
+      internalID: -3933547386417030476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_25
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 328
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d28bfd6d8f0f5ec0800000000000000
+      internalID: -3576122478998879533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_26
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 323
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3424211eb4bf89aa0800000000000000
+      internalID: -6153892587484593597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_27
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 308
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa70953400acee850800000000000000
+      internalID: 6408281422273513386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_28
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 319
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e2065f67277ba70800000000000000
+      internalID: 8842662248613686843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_29
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 280
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e6b545af1971a70800000000000000
+      internalID: 8797660901434682882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_30
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 263
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6fc5ac9c0cd7c760800000000000000
+      internalID: 7478187652997828463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_31
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 248
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d854be7c2943046d0800000000000000
+      internalID: -3008346746059537011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_32
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 263
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e3f5981aadfea30800000000000000
+      internalID: 4246853360962977361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_33
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 237
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea865dac374540a0800000000000000
+      internalID: -6898028928316306715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_34
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 224
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49ea7bfaf218dc20800000000000000
+      internalID: 3231353601808591183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_35
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 207
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da8542df670497290800000000000000
+      internalID: -7892205992192747347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_36
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 203
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c030798aa22775e0800000000000000
+      internalID: -1912021400949870396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_37
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 196
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593b3151311b5b020800000000000000
+      internalID: 2356984675514430357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_38
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 188
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc13a2ffe2eae3670800000000000000
+      internalID: 8520439061904241099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_39
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 187
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea7d0d31abb8de7d0800000000000000
+      internalID: -2887498154761988178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_40
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d9c675f7be8cb90800000000000000
+      internalID: -7221263070328480476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_41
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 168
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aafd1ef0d7514b8b0800000000000000
+      internalID: -5137457648041336918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_42
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 160
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c39ab4fb1ea6aed0800000000000000
+      internalID: -2403041916062362681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_43
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 153
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32e5b66f088c2370800000000000000
+      internalID: 8299157813066064442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_44
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 146
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf312afe68192580800000000000000
+      internalID: -8851516727698047041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_45
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 127
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ebddcfdcc5609890800000000000000
+      internalID: -7453345452695626776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_46
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 111
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ee257ef943be340800000000000000
+      internalID: 4894063281453592186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_47
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 123
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbdb2d87824f02630800000000000000
+      internalID: 3900385731965795771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_48
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 102
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e792156c6b663dd70800000000000000
+      internalID: 9066703410024229246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_49
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 98
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b23797a0939f5300800000000000000
+      internalID: 243075154397573812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_50
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 88
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f34b09ee06678650800000000000000
+      internalID: 6235064423343145975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_51
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 95
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 135a7cf6d835895c0800000000000000
+      internalID: -4208521984846879439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_52
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 85
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e52954efcdee7b0800000000000000
+      internalID: -5192970335664578952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_53
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 69
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21d59b0b4ac18be0800000000000000
+      internalID: -1476676779135086292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_54
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 58
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7debe31de6bba4cd0800000000000000
+      internalID: -2573038152457470249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_55
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 42
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deff48438e2e11450800000000000000
+      internalID: 6057872460731449325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_56
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 37
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb6381a462bf5d50800000000000000
+      internalID: 6728292513591028705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_57
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 5
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8705b2683e51b2b60800000000000000
+      internalID: 7722290053009592440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Salto_58
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 0
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb269d67202b5f50800000000000000
+      internalID: 6871121010198195123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tutos Salto_0: 7668287377673245618
+      Tutos Salto_1: 7719903650357477179
+      Tutos Salto_10: 8120091515432263340
+      Tutos Salto_11: 293701291829225512
+      Tutos Salto_12: -7309550144469696357
+      Tutos Salto_13: -4948225520414855194
+      Tutos Salto_14: -4026017487767841173
+      Tutos Salto_15: 5156964238908509961
+      Tutos Salto_16: 4713898831216616081
+      Tutos Salto_17: 5307544348180445644
+      Tutos Salto_18: 2857505596964077043
+      Tutos Salto_19: 4727669830035233359
+      Tutos Salto_2: -4720513938854830797
+      Tutos Salto_20: 602545261079643602
+      Tutos Salto_21: 7850637152446824572
+      Tutos Salto_22: 53939540079423749
+      Tutos Salto_23: -1704797169024140127
+      Tutos Salto_24: -3933547386417030476
+      Tutos Salto_25: -3576122478998879533
+      Tutos Salto_26: -6153892587484593597
+      Tutos Salto_27: 6408281422273513386
+      Tutos Salto_28: 8842662248613686843
+      Tutos Salto_29: 8797660901434682882
+      Tutos Salto_3: -4950899158769198930
+      Tutos Salto_30: 7478187652997828463
+      Tutos Salto_31: -3008346746059537011
+      Tutos Salto_32: 4246853360962977361
+      Tutos Salto_33: -6898028928316306715
+      Tutos Salto_34: 3231353601808591183
+      Tutos Salto_35: -7892205992192747347
+      Tutos Salto_36: -1912021400949870396
+      Tutos Salto_37: 2356984675514430357
+      Tutos Salto_38: 8520439061904241099
+      Tutos Salto_39: -2887498154761988178
+      Tutos Salto_4: 1329223255788331643
+      Tutos Salto_40: -7221263070328480476
+      Tutos Salto_41: -5137457648041336918
+      Tutos Salto_42: -2403041916062362681
+      Tutos Salto_43: 8299157813066064442
+      Tutos Salto_44: -8851516727698047041
+      Tutos Salto_45: -7453345452695626776
+      Tutos Salto_46: 4894063281453592186
+      Tutos Salto_47: 3900385731965795771
+      Tutos Salto_48: 9066703410024229246
+      Tutos Salto_49: 243075154397573812
+      Tutos Salto_5: -7868325561634809182
+      Tutos Salto_50: 6235064423343145975
+      Tutos Salto_51: -4208521984846879439
+      Tutos Salto_52: -5192970335664578952
+      Tutos Salto_53: -1476676779135086292
+      Tutos Salto_54: -2573038152457470249
+      Tutos Salto_55: 6057872460731449325
+      Tutos Salto_56: 6728292513591028705
+      Tutos Salto_57: 7722290053009592440
+      Tutos Salto_58: 6871121010198195123
+      Tutos Salto_6: 8702764601578284545
+      Tutos Salto_7: 6868057779514440710
+      Tutos Salto_8: -2006841349773531136
+      Tutos Salto_9: 1378634371309932233
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

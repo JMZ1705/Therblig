@@ -1,0 +1,2249 @@
+fileFormatVersion: 2
+guid: 658a4bf358c38e54bbdf6fba1f2df50f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3568637342060841377
+    second: Tutos Ataque_0
+  - first:
+      213: -3065218805301454237
+    second: Tutos Ataque_1
+  - first:
+      213: 7757120233197005580
+    second: Tutos Ataque_2
+  - first:
+      213: 2645624435090009278
+    second: Tutos Ataque_3
+  - first:
+      213: 1174178664288345724
+    second: Tutos Ataque_4
+  - first:
+      213: 503512881495002780
+    second: Tutos Ataque_5
+  - first:
+      213: -6655744886883399637
+    second: Tutos Ataque_6
+  - first:
+      213: 2215424499949405486
+    second: Tutos Ataque_7
+  - first:
+      213: 7189385311372725686
+    second: Tutos Ataque_8
+  - first:
+      213: 7252347953872951676
+    second: Tutos Ataque_9
+  - first:
+      213: 8163977247129995843
+    second: Tutos Ataque_10
+  - first:
+      213: 688248161291408510
+    second: Tutos Ataque_11
+  - first:
+      213: -1283563116283127363
+    second: Tutos Ataque_12
+  - first:
+      213: 8705692463738311215
+    second: Tutos Ataque_13
+  - first:
+      213: 4543557956847825127
+    second: Tutos Ataque_14
+  - first:
+      213: -8518882982613579506
+    second: Tutos Ataque_15
+  - first:
+      213: 6393073504935880567
+    second: Tutos Ataque_16
+  - first:
+      213: 414394147198820486
+    second: Tutos Ataque_17
+  - first:
+      213: -6266729173863311483
+    second: Tutos Ataque_18
+  - first:
+      213: 8278529790501542630
+    second: Tutos Ataque_19
+  - first:
+      213: -5748445008041882005
+    second: Tutos Ataque_20
+  - first:
+      213: -8822718203975979258
+    second: Tutos Ataque_21
+  - first:
+      213: 8746174564462136889
+    second: Tutos Ataque_22
+  - first:
+      213: -6040073377811395423
+    second: Tutos Ataque_23
+  - first:
+      213: 3444272790021948232
+    second: Tutos Ataque_24
+  - first:
+      213: 6827212576584174193
+    second: Tutos Ataque_25
+  - first:
+      213: -5250260734973205265
+    second: Tutos Ataque_26
+  - first:
+      213: -1234190409232880201
+    second: Tutos Ataque_27
+  - first:
+      213: 2851555135884414780
+    second: Tutos Ataque_28
+  - first:
+      213: 3092404256434610743
+    second: Tutos Ataque_29
+  - first:
+      213: -232013812346917341
+    second: Tutos Ataque_30
+  - first:
+      213: -3491390059362323716
+    second: Tutos Ataque_31
+  - first:
+      213: 945345568332469943
+    second: Tutos Ataque_32
+  - first:
+      213: -4978773394425667788
+    second: Tutos Ataque_33
+  - first:
+      213: 8248439022080494084
+    second: Tutos Ataque_34
+  - first:
+      213: 5810872049643753657
+    second: Tutos Ataque_35
+  - first:
+      213: 2683390948168317424
+    second: Tutos Ataque_36
+  - first:
+      213: 1582902961468773098
+    second: Tutos Ataque_37
+  - first:
+      213: 1185785588215691094
+    second: Tutos Ataque_38
+  - first:
+      213: -7095905059636483604
+    second: Tutos Ataque_39
+  - first:
+      213: 7225308829575592538
+    second: Tutos Ataque_40
+  - first:
+      213: -7663890996821985035
+    second: Tutos Ataque_41
+  - first:
+      213: -6606926134729305256
+    second: Tutos Ataque_42
+  - first:
+      213: -5469276517459385980
+    second: Tutos Ataque_43
+  - first:
+      213: -8972036094967399318
+    second: Tutos Ataque_44
+  - first:
+      213: 1238084519758123409
+    second: Tutos Ataque_45
+  - first:
+      213: -8918199812423813802
+    second: Tutos Ataque_46
+  - first:
+      213: 3737109572522749200
+    second: Tutos Ataque_47
+  - first:
+      213: -6599795759266306134
+    second: Tutos Ataque_48
+  - first:
+      213: 8430624154202021594
+    second: Tutos Ataque_49
+  - first:
+      213: -9154636929258799450
+    second: Tutos Ataque_50
+  - first:
+      213: -4552034235273208657
+    second: Tutos Ataque_51
+  - first:
+      213: 4997101371298168021
+    second: Tutos Ataque_52
+  - first:
+      213: 5379818858225206055
+    second: Tutos Ataque_53
+  - first:
+      213: 4596123472331314767
+    second: Tutos Ataque_54
+  - first:
+      213: -4670556606535406187
+    second: Tutos Ataque_55
+  - first:
+      213: 9167489286994297933
+    second: Tutos Ataque_56
+  - first:
+      213: 4109050952342165328
+    second: Tutos Ataque_57
+  - first:
+      213: 3861052129190932644
+    second: Tutos Ataque_58
+  - first:
+      213: -3100995770050985588
+    second: Tutos Ataque_59
+  - first:
+      213: -3013275306356584189
+    second: Tutos Ataque_60
+  - first:
+      213: 7242156169490217169
+    second: Tutos Ataque_61
+  - first:
+      213: 5926831454637728160
+    second: Tutos Ataque_62
+  - first:
+      213: 8979849794108590328
+    second: Tutos Ataque_63
+  - first:
+      213: -4888792621824408134
+    second: Tutos Ataque_64
+  - first:
+      213: 5418553566175460341
+    second: Tutos Ataque_65
+  - first:
+      213: -4681356043197403639
+    second: Tutos Ataque_66
+  - first:
+      213: -9056544155095773850
+    second: Tutos Ataque_67
+  - first:
+      213: -119439578580685618
+    second: Tutos Ataque_68
+  - first:
+      213: -8311393528101702839
+    second: Tutos Ataque_69
+  - first:
+      213: -4516011614112785894
+    second: Tutos Ataque_70
+  - first:
+      213: 7559971133206355229
+    second: Tutos Ataque_71
+  - first:
+      213: -6728502850658242447
+    second: Tutos Ataque_72
+  - first:
+      213: 3473847005980420029
+    second: Tutos Ataque_73
+  - first:
+      213: -8842166531765054509
+    second: Tutos Ataque_74
+  - first:
+      213: -8254987872813496782
+    second: Tutos Ataque_75
+  - first:
+      213: 7950433032358460435
+    second: Tutos Ataque_76
+  - first:
+      213: 4257133975228928523
+    second: Tutos Ataque_77
+  - first:
+      213: -5871761038153065617
+    second: Tutos Ataque_78
+  - first:
+      213: -6152047389173725025
+    second: Tutos Ataque_79
+  - first:
+      213: 5804729050172211681
+    second: Tutos Ataque_80
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tutos Ataque_0
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1012
+        width: 18
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a90bb151c8568130800000000000000
+      internalID: 3568637342060841377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_1
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 954
+        width: 113
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ad82f9cb72675d0800000000000000
+      internalID: -3065218805301454237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_2
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 808
+        width: 147
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0be3bbc0c3d6ab60800000000000000
+      internalID: 7757120233197005580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_3
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 752
+        width: 205
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc22a6186527b420800000000000000
+      internalID: 2645624435090009278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_4
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 803
+        width: 86
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7edfbb26458b4010800000000000000
+      internalID: 1174178664288345724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 183
+        width: 539
+        height: 708
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ec7594c46dcf600800000000000000
+      internalID: 503512881495002780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_6
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 779
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2841bdf94b02a3a0800000000000000
+      internalID: -6655744886883399637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_7
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 789
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e258e2a48d4cebe10800000000000000
+      internalID: 2215424499949405486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_8
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 804
+        width: 123
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd48c589d3d5c360800000000000000
+      internalID: 7189385311372725686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_9
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 786
+        width: 98
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79d02a1a0485a460800000000000000
+      internalID: 7252347953872951676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_10
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 796
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a0e893d064c4170800000000000000
+      internalID: 8163977247129995843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_11
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 767
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7417136e062d8900800000000000000
+      internalID: 688248161291408510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_12
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 754
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db99627752edf2ee0800000000000000
+      internalID: -1283563116283127363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_13
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 756
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22dae8cb25d0d870800000000000000
+      internalID: 8705692463738311215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_14
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 774
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0705293e5fd0f30800000000000000
+      internalID: 4543557956847825127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_15
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 761
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e098232ff09d6c980800000000000000
+      internalID: -8518882982613579506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_16
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 350
+        width: 338
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7772aa41b72c8b850800000000000000
+      internalID: 6393073504935880567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_17
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 749
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68069c4084930c500800000000000000
+      internalID: 414394147198820486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_18
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 364
+        width: 428
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587dc48d40b1809a0800000000000000
+      internalID: -6266729173863311483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 435
+        width: 349
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea5551abfe33e270800000000000000
+      internalID: 8278529790501542630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_20
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 566
+        width: 78
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ecbc4c8bb6930b0800000000000000
+      internalID: -5748445008041882005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_21
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 559
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60fa3aac9886f8580800000000000000
+      internalID: -8822718203975979258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_22
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 559
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e825a5d67a06970800000000000000
+      internalID: 8746174564462136889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_23
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 518
+        width: 14
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac024ab3495d2ca0800000000000000
+      internalID: -6040073377811395423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_24
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 530
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8434dce9ad38ccf20800000000000000
+      internalID: 3444272790021948232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_25
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 537
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a01619aa12fbe50800000000000000
+      internalID: 6827212576584174193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_26
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 526
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4adb9bda35327b0800000000000000
+      internalID: -5250260734973205265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_27
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 488
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bdea70ac564fdee0800000000000000
+      internalID: -1234190409232880201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_28
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 450
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3fc4d3b942c29720800000000000000
+      internalID: 2851555135884414780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_29
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 457
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 732e0b6794d6aea20800000000000000
+      internalID: 3092404256434610743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_30
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 441
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ee31cbaa8b7ccf0800000000000000
+      internalID: -232013812346917341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_31
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 442
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2f06b3d371c8fc0800000000000000
+      internalID: -3491390059362323716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_32
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 447
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6527629ca8e1d00800000000000000
+      internalID: 945345568332469943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_33
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 436
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f9718f9f7d7eab0800000000000000
+      internalID: -4978773394425667788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_34
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 350
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a0496a697587270800000000000000
+      internalID: 8248439022080494084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_35
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 298
+        width: 78
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b01342875d54a050800000000000000
+      internalID: 5810872049643753657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_36
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 357
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f93213a9d15d3520800000000000000
+      internalID: 2683390948168317424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_37
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 344
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2924c5bd997f510800000000000000
+      internalID: 1582902961468773098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_38
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 337
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657bf5db5b1c47010800000000000000
+      internalID: 1185785588215691094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_39
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 328
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce96878a1f7468d90800000000000000
+      internalID: -7095905059636483604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_40
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 335
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ab8536914754460800000000000000
+      internalID: 7225308829575592538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_41
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 330
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f87c115eb364a590800000000000000
+      internalID: -7663890996821985035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_42
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 323
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853173a7fab7f44a0800000000000000
+      internalID: -6606926134729305256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_43
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 319
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481a27e1cf93914b0800000000000000
+      internalID: -5469276517459385980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_44
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 315
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6c3c7f15bcec7380800000000000000
+      internalID: -8972036094967399318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_45
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 326
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 191d712af4f8e2110800000000000000
+      internalID: 1238084519758123409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_46
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 308
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655f58075803c3480800000000000000
+      internalID: -8918199812423813802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_47
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 280
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d2eec2b51ecd330800000000000000
+      internalID: 3737109572522749200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_48
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 287
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa76dc269b0d864a0800000000000000
+      internalID: -6599795759266306134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_49
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 263
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade1a0a30089ff470800000000000000
+      internalID: 8430624154202021594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_50
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 248
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ae3bd7573234f080800000000000000
+      internalID: -9154636929258799450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_51
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 263
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac9f111bfce3d0c0800000000000000
+      internalID: -4552034235273208657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_52
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 237
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc38dea835495540800000000000000
+      internalID: 4997101371298168021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_53
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 224
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72306708fb4f8aa40800000000000000
+      internalID: 5379818858225206055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_54
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 190
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46942062f5b8cf30800000000000000
+      internalID: 4596123472331314767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_55
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 224
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d6a141389de2fb0800000000000000
+      internalID: -4670556606535406187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_56
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 207
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d448e716fe6793f70800000000000000
+      internalID: 9167489286994297933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_57
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 203
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 057d55a0218460930800000000000000
+      internalID: 4109050952342165328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_58
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 196
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0f0bb6476359530800000000000000
+      internalID: 3861052129190932644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_59
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 49
+        width: 68
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c814f14e6cc07f4d0800000000000000
+      internalID: -3100995770050985588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_60
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 188
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301d82ae212be26d0800000000000000
+      internalID: -3013275306356584189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_61
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 187
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d83e526aae418460800000000000000
+      internalID: 7242156169490217169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_62
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a12b496ec5504250800000000000000
+      internalID: 5926831454637728160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_63
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 168
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f8053a7fc5de9c70800000000000000
+      internalID: 8979849794108590328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_64
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 160
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab50b9b2305872cb0800000000000000
+      internalID: -4888792621824408134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_65
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 153
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb705c72c1923b40800000000000000
+      internalID: 5418553566175460341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_66
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 146
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e271a4b7b780fb0800000000000000
+      internalID: -4681356043197403639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_67
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 127
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d40e61311b05280800000000000000
+      internalID: -9056544155095773850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_68
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 111
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecc639a065aa75ef0800000000000000
+      internalID: -119439578580685618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_69
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 123
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94374013f9ff7ac80800000000000000
+      internalID: -8311393528101702839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_70
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 102
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ad4432d57e351c0800000000000000
+      internalID: -4516011614112785894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_71
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 98
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1dd8f2f0b96ae860800000000000000
+      internalID: 7559971133206355229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_72
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 88
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170ff447e4e8f92a0800000000000000
+      internalID: -6728502850658242447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_73
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 95
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7648b5275953030800000000000000
+      internalID: 3473847005980420029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_74
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 85
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3db4d13605a4580800000000000000
+      internalID: -8842166531765054509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_75
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 69
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2364bc73444607d80800000000000000
+      internalID: -8254987872813496782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_76
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 58
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31cf14048bc955e60800000000000000
+      internalID: 7950433032358460435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_77
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 42
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0254c29bc0641b30800000000000000
+      internalID: 4257133975228928523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_78
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 37
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b58ea1270538ea0800000000000000
+      internalID: -5871761038153065617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_79
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 5
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f984ee69e798f9aa0800000000000000
+      internalID: -6152047389173725025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutos Ataque_80
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 0
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1c7ecf05a8e8050800000000000000
+      internalID: 5804729050172211681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tutos Ataque_0: 3568637342060841377
+      Tutos Ataque_1: -3065218805301454237
+      Tutos Ataque_10: 8163977247129995843
+      Tutos Ataque_11: 688248161291408510
+      Tutos Ataque_12: -1283563116283127363
+      Tutos Ataque_13: 8705692463738311215
+      Tutos Ataque_14: 4543557956847825127
+      Tutos Ataque_15: -8518882982613579506
+      Tutos Ataque_16: 6393073504935880567
+      Tutos Ataque_17: 414394147198820486
+      Tutos Ataque_18: -6266729173863311483
+      Tutos Ataque_19: 8278529790501542630
+      Tutos Ataque_2: 7757120233197005580
+      Tutos Ataque_20: -5748445008041882005
+      Tutos Ataque_21: -8822718203975979258
+      Tutos Ataque_22: 8746174564462136889
+      Tutos Ataque_23: -6040073377811395423
+      Tutos Ataque_24: 3444272790021948232
+      Tutos Ataque_25: 6827212576584174193
+      Tutos Ataque_26: -5250260734973205265
+      Tutos Ataque_27: -1234190409232880201
+      Tutos Ataque_28: 2851555135884414780
+      Tutos Ataque_29: 3092404256434610743
+      Tutos Ataque_3: 2645624435090009278
+      Tutos Ataque_30: -232013812346917341
+      Tutos Ataque_31: -3491390059362323716
+      Tutos Ataque_32: 945345568332469943
+      Tutos Ataque_33: -4978773394425667788
+      Tutos Ataque_34: 8248439022080494084
+      Tutos Ataque_35: 5810872049643753657
+      Tutos Ataque_36: 2683390948168317424
+      Tutos Ataque_37: 1582902961468773098
+      Tutos Ataque_38: 1185785588215691094
+      Tutos Ataque_39: -7095905059636483604
+      Tutos Ataque_4: 1174178664288345724
+      Tutos Ataque_40: 7225308829575592538
+      Tutos Ataque_41: -7663890996821985035
+      Tutos Ataque_42: -6606926134729305256
+      Tutos Ataque_43: -5469276517459385980
+      Tutos Ataque_44: -8972036094967399318
+      Tutos Ataque_45: 1238084519758123409
+      Tutos Ataque_46: -8918199812423813802
+      Tutos Ataque_47: 3737109572522749200
+      Tutos Ataque_48: -6599795759266306134
+      Tutos Ataque_49: 8430624154202021594
+      Tutos Ataque_5: 503512881495002780
+      Tutos Ataque_50: -9154636929258799450
+      Tutos Ataque_51: -4552034235273208657
+      Tutos Ataque_52: 4997101371298168021
+      Tutos Ataque_53: 5379818858225206055
+      Tutos Ataque_54: 4596123472331314767
+      Tutos Ataque_55: -4670556606535406187
+      Tutos Ataque_56: 9167489286994297933
+      Tutos Ataque_57: 4109050952342165328
+      Tutos Ataque_58: 3861052129190932644
+      Tutos Ataque_59: -3100995770050985588
+      Tutos Ataque_6: -6655744886883399637
+      Tutos Ataque_60: -3013275306356584189
+      Tutos Ataque_61: 7242156169490217169
+      Tutos Ataque_62: 5926831454637728160
+      Tutos Ataque_63: 8979849794108590328
+      Tutos Ataque_64: -4888792621824408134
+      Tutos Ataque_65: 5418553566175460341
+      Tutos Ataque_66: -4681356043197403639
+      Tutos Ataque_67: -9056544155095773850
+      Tutos Ataque_68: -119439578580685618
+      Tutos Ataque_69: -8311393528101702839
+      Tutos Ataque_7: 2215424499949405486
+      Tutos Ataque_70: -4516011614112785894
+      Tutos Ataque_71: 7559971133206355229
+      Tutos Ataque_72: -6728502850658242447
+      Tutos Ataque_73: 3473847005980420029
+      Tutos Ataque_74: -8842166531765054509
+      Tutos Ataque_75: -8254987872813496782
+      Tutos Ataque_76: 7950433032358460435
+      Tutos Ataque_77: 4257133975228928523
+      Tutos Ataque_78: -5871761038153065617
+      Tutos Ataque_79: -6152047389173725025
+      Tutos Ataque_8: 7189385311372725686
+      Tutos Ataque_80: 5804729050172211681
+      Tutos Ataque_9: 7252347953872951676
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
