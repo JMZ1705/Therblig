@@ -26536,6 +26536,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1501280329}
     - target: {fileID: 2872260152913294531, guid: 6edab7d33f77b374f9e2583f9359538a, type: 3}
+      propertyPath: iVidas
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872260152913294531, guid: 6edab7d33f77b374f9e2583f9359538a, type: 3}
       propertyPath: finalBoss
       value: 
       objectReference: {fileID: 843573970}

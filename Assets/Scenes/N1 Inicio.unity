@@ -166939,7 +166939,7 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   vidas: 2
-  iVidas: 1
+  iVidas: 2
   hitForce: 0
   hitUpForce: 12
   hitDuration: 0.45
