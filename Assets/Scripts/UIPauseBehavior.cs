@@ -8,13 +8,16 @@ public class UIPauseBehavior : MonoBehaviour
     
     [SerializeField] private GameObject pauseMenuPanel;
 
-
+    [SerializeField] private GameObject afterDeathPanel;
+    [SerializeField] private GameObject levelFinishPanel;
     [SerializeField] private InputActionReference pauseActionReference;
 
     [SerializeField] private Button resumeButton;
     [SerializeField] private Button journalButton;
     [SerializeField] private Button settingsButton;
     [SerializeField] private Button titleButton;
+    [SerializeField] private Button stageFinishButton;
+    [SerializeField] private Button stageFailButton;
     
     [SerializeField] private GameObject journalPanel;
     [SerializeField] private GameObject settingsPanel;
@@ -22,10 +25,12 @@ public class UIPauseBehavior : MonoBehaviour
     public AudioClip openSound;
     public AudioClip closeSound;
     public AudioSource canvasAudioSource;
+    
 
     private bool isPaused = false;
 
-    public void Update(){
+    public void Update()
+    {
         camAnimator.SetBool("isPaused", isPaused);
     }
 
@@ -91,5 +96,14 @@ public class UIPauseBehavior : MonoBehaviour
             Time.timeScale = 1f; // Reanuda el tiempo del juego
 
         }
+    }
+    public void DeathPanel()
+    {
+        afterDeathPanel.SetActive(true);
+    }
+    public void FinishPanel()
+    {
+        levelFinishPanel.SetActive(true);
+        stageFinishButton.Select();
     }
 }

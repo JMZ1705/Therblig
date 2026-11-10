@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public GameObject player;
     public GameObject spawn;
     public GameManager gm;
+    public UIPauseBehavior panelesMuerteYFinal;
 
     // --- Movimiento horizontal ---
     public float direction;
@@ -121,6 +122,7 @@ public class PlayerController : MonoBehaviour
 
         vidas = iVidas;
         UpdateUI();
+
     }
 
     // ========================================================================
@@ -449,7 +451,7 @@ public class PlayerController : MonoBehaviour
 
         if (vidas <= 0)
         {
-            if (gm != null) gm.LevelFour();
+            panelesMuerteYFinal.DeathPanel();
         }
         else
         {
@@ -490,10 +492,12 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Ending"))
         {
-            if (gm != null) gm.LevelSelect();
+            
+            panelesMuerteYFinal.FinishPanel();
         }
         if (collision.gameObject.CompareTag("Kill-Planes"))
         {
+            TakeDamage(50);
             KillPlayer();
         }
     }
@@ -502,6 +506,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("confiner"))
         {
+            TakeDamage(50);
             KillPlayer();
         }
     }
