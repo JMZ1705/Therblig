@@ -751514,6 +751514,17 @@ MonoBehaviour:
   diveForce: 8
   diveDamage: 25
   checkpointAnimator: {fileID: 380635423}
+  audioSource: {fileID: 0}
+  sfxVolume: 0.5
+  soundRunStep1: {fileID: 0}
+  soundRunStep2: {fileID: 0}
+  soundJump: {fileID: 0}
+  soundWallJump: {fileID: 0}
+  soundDash: {fileID: 0}
+  soundLightAttack: {fileID: 0}
+  soundHeavyAttack: {fileID: 0}
+  soundHurt: {fileID: 0}
+  soundDie: {fileID: 0}
 --- !u!70 &360038845
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -753802,6 +753813,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LevelSelect
       objectReference: {fileID: 0}
+    - target: {fileID: 3598698597144971578, guid: d29acf8d2b9b73a45b64344c46050dcd, type: 3}
+      propertyPath: m_Color.b
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598698597144971578, guid: d29acf8d2b9b73a45b64344c46050dcd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598698597144971578, guid: d29acf8d2b9b73a45b64344c46050dcd, type: 3}
+      propertyPath: m_Color.r
+      value: 0.40392157
+      objectReference: {fileID: 0}
     - target: {fileID: 4333067255757083543, guid: d29acf8d2b9b73a45b64344c46050dcd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -753881,6 +753904,18 @@ PrefabInstance:
     - target: {fileID: 4333067255757083543, guid: d29acf8d2b9b73a45b64344c46050dcd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661980744605148539, guid: d29acf8d2b9b73a45b64344c46050dcd, type: 3}
+      propertyPath: m_Color.b
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661980744605148539, guid: d29acf8d2b9b73a45b64344c46050dcd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661980744605148539, guid: d29acf8d2b9b73a45b64344c46050dcd, type: 3}
+      propertyPath: m_Color.r
+      value: 0.40392157
       objectReference: {fileID: 0}
     - target: {fileID: 6657281041449867736, guid: d29acf8d2b9b73a45b64344c46050dcd, type: 3}
       propertyPath: m_Name
@@ -755663,10 +755698,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 714266895192219651, guid: eba78c3b702a88d4b9d6d93880c16860, type: 3}
+      propertyPath: m_Color.b
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 714266895192219651, guid: eba78c3b702a88d4b9d6d93880c16860, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 714266895192219651, guid: eba78c3b702a88d4b9d6d93880c16860, type: 3}
+      propertyPath: m_Color.r
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 935111242964477750, guid: eba78c3b702a88d4b9d6d93880c16860, type: 3}
+      propertyPath: m_Color.b
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 935111242964477750, guid: eba78c3b702a88d4b9d6d93880c16860, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 935111242964477750, guid: eba78c3b702a88d4b9d6d93880c16860, type: 3}
+      propertyPath: m_Color.r
+      value: 0.40392157
+      objectReference: {fileID: 0}
     - target: {fileID: 1079166158710776605, guid: eba78c3b702a88d4b9d6d93880c16860, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 980637241}
+    - target: {fileID: 4894327622507607697, guid: eba78c3b702a88d4b9d6d93880c16860, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894327622507607697, guid: eba78c3b702a88d4b9d6d93880c16860, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894327622507607697, guid: eba78c3b702a88d4b9d6d93880c16860, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5670262831407937835, guid: eba78c3b702a88d4b9d6d93880c16860, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
