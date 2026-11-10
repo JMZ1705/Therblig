@@ -10,6 +10,7 @@ public class StaticShooterEnemy : MonoBehaviour
     [Header("Referencias")]
     [SerializeField] private Transform playerTransform;
     [SerializeField] private bool isFacingRight = true;
+    [SerializeField] private Animator enemyAnimator;
 
     private float fireTimer;
 
@@ -17,6 +18,7 @@ public class StaticShooterEnemy : MonoBehaviour
     {
         if (playerTransform == null)
         {
+            enemyAnimator = GetComponent<Animator>();
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
             if (playerObj != null)
             {
@@ -52,6 +54,7 @@ public class StaticShooterEnemy : MonoBehaviour
     {
         if (projectilePrefab == null || firePoint == null)
         {
+            enemyAnimator.SetTrigger("Attack");
             Debug.LogWarning("Falta asignar el Projectile Prefab o el Fire Point en el Inspector.");
             return;
         }

@@ -162,11 +162,11 @@ public class EnemyController : MonoBehaviour
         // ---- 4. ¿DEBO VOLTEAR EL SPRITE? ----
         // Misma lógica que en el jugador: comparamos hacia dónde MIRA con
         // hacia dónde SE MUEVE. Si no coinciden, lo volteamos.
-        if (roundDirection > 0 && isFacingRight)        // Va a la izquierda pero mira a la derecha.
+        if (roundDirection < 0 && isFacingRight)        // Va a la izquierda pero mira a la derecha.
         {
             Flip();
         }
-        else if (roundDirection < 0 && !isFacingRight)  // Va a la derecha pero mira a la izquierda.
+        else if (roundDirection > 0 && !isFacingRight)  // Va a la derecha pero mira a la izquierda.
         {
             Flip();
         }
@@ -232,6 +232,7 @@ public class EnemyController : MonoBehaviour
         // usar y no solo una etiqueta que alguien pudo asignar mal.
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
+            enemyAnimator.SetTrigger("Attack");
             // Guardamos la referencia al script del jugador en una variable,
             // para no tener que escribir GetComponent una y otra vez.
             // Ahora, a través de "player", podemos usar sus métodos y variables.
